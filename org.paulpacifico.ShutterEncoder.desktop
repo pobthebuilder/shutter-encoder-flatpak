@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Shutter Encoder
+Name[en_US]=Shutter Encoder
+GenericName=Shutter Encoder
+Comment=A converter designed by video editors. The professional compression tool accessible to all.
+Exec=/app/bin/ShutterEncoder.sh %U
+Icon=org.paulpacifico.ShutterEncoder
+Terminal=false
+StartupNotify=true
+Categories=AudioVideo

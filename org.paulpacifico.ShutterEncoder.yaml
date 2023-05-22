@@ -1,0 +1,116 @@
+####
+# Flatpak Configuration for building Shutter Encoder
+#
+####
+app-id: org.paulpacifico.ShutterEncoder
+runtime: org.freedesktop.Platform
+runtime-version: &runtime-version '22.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.openjdk
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=pulseaudio
+  - --socket=x11
+  - --socket=wayland
+  - --device=dri
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-cache
+  - --filesystem=xdg-data
+  - --filesystem=xdg-videos
+
+command: /app/bin/ShutterEncoder.sh
+modules:
+  # Installs the JRE into /app/jre
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/openjdk/install.sh
+  - name: libzen
+    subdir: Project/GNU/Library
+    config-opts:
+      - --enable-shared
+      - --disable-static
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/*.la
+    sources:
+      - type: archive
+        url: https://mediaarea.net/download/source/libzen/0.4.40/libzen_0.4.40.tar.xz
+        sha256: 0c2e1c7302b3ee260d34b52e4b16ab655bdf021db8c14653e418aced46eb24a7
+  - name: libmediainfo
+    subdir: Project/GNU/Library
+    config-opts:
+      - --enable-shared
+      - --disable-static
+      - --with-libcurl
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/*.la
+    sources:
+      - type: archive
+        url: https://mediaarea.net/download/source/libmediainfo/23.03/libmediainfo_23.03.tar.xz
+        sha256: f57afffd76c6f9569ceb1e778fce834508eb0289bdeb62181143804aa3a6c098
+  - name: nv-codec-headers
+    only-arches:
+      - i386
+      - x86_64
+    no-autogen: true
+    make-install-args: 
+      - PREFIX=/app
+    sources:
+      - type: archive
+        url: https://github.com/FFmpeg/nv-codec-headers/archive/n9.0.18.1.tar.gz
+        sha256: 6181a5dac66a6990aa3baf10a77ae677f372b9068be9ef73abfd37b73fb4c745
+    cleanup: ['*']
+  - name: ffmpeg
+    config-opts:
+      - --prefix=/app
+      - --bindir=/app/bin/Library
+      - --enable-shared
+      - --disable-static
+      - --disable-doc
+      - --disable-manpages
+      - --disable-stripping
+      - --disable-ffplay
+      - --enable-gpl
+      - --enable-nonfree
+      - --enable-nvdec
+      - --enable-nvenc
+      - --enable-cuvid
+    sources:
+      - type: archive
+        url: https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz
+        sha256: cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4
+    post-install:
+      - install -p -D -m 0644 COPYING* "LICENSE.md" -t "${FLATPAK_DEST}/share/licenses/ffmpeg/";
+    cleanup:
+      - /share/ffmpeg/examples
+  - name: shutter-encoder
+    buildsystem: cmake
+    build-options:
+      env:
+        JAVA_HOME: /usr/lib/sdk/openjdk/jvm/openjdk-20
+        JAVA_COMPILER: /usr/lib/sdk/openjdk/jvm/openjdk-20/bin/javac
+    post-install:
+      - cp src/contents/icon.png org.paulpacifico.ShutterEncoder.png
+      - install -Dm644 org.paulpacifico.ShutterEncoder.desktop -t /app/share/applications
+      - install -Dm644 org.paulpacifico.ShutterEncoder.png -t /app/share/icons/hicolor/256x256/apps
+      - install -Dm644 org.paulpacifico.ShutterEncoder.metainfo.xml -t /app/share/metainfo
+    sources:
+      - type: git
+        url: https://github.com/paulpacifico/shutter-encoder.git
+        tag: "17.1"
+      - type: file
+        path: CMakeLists.txt
+      - type: file
+        path: ShutterEncoder.sh
+      - type: file
+        path: org.paulpacifico.ShutterEncoder.desktop
+      - type: file
+        path: org.paulpacifico.ShutterEncoder.metainfo.xml

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2013 First Lastname <your@email.com> -->
+<component type="desktop-application">
+  <id>org.paulpacifico.ShutterEncoder</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Shutter Encoder</name>
+  <summary>A converter designed by video editors. The professional compression tool accessible to all.</summary>
+
+  <description>
+    <p>Shutter Encoder is one of the best video converter software, it handles images and audio too!  It has been designed by video editors in order to be as accessible and efficient as possible.  Shutter Encoder makes use of FFmpeg to handle its encoding, allowing support for almost every codec you’ve ever heard of, and many more you haven’t.  Don’t just take our word for it though, Avid themselves recommend Shutter Encoder as part of your Media Composer and ProTools ingesting workflow! </p>
+  </description>
+
+  <launchable type="desktop-id">org.paulpacifico.ShutterEncoder.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Player</caption>
+      <image>https://www.shutterencoder.com/images/en/Player.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Color</caption>
+      <image>https://www.shutterencoder.com/images/en/Color.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Crop</caption>
+      <image>https://www.shutterencoder.com/images/en/Crop.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Overlay</caption>
+      <image>https://www.shutterencoder.com/images/en/Overlay.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Burn Subtitles</caption>
+      <image>https://www.shutterencoder.com/images/en/BurnSubtitles.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Watermark</caption>
+      <image>https://www.shutterencoder.com/images/en/Watermark.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://www.shutterencoder.com/</url>
+  <project_group>Paul Pacifico</project_group>
+  <provides>
+    <binary>ShutterEncoder.jar</binary>
+  </provides>
+
+  <releases>
+    <release version="17.1">
+      <description>
+- Added ".apng" extension for the "Image" function
+- Ability to preview transitions with "Edit media content" window
+- Ability to select the audio codec for editing and broadcast codecs
+- Ability to select audio sample rate for editing and broadcast codecs
+- Ability to convert audio to 'Stereo' or 'Mono' for editing and broadcast codecs
+- Changed settings.xml &amp; presets location to "/Users/*username*/Shutter Encoder"
+- Corrected bug with input and output points for sound conversions &amp; output codecs
+- Corrected bug with "2-pass" checkbox using "VP8 &amp; "VP9" functions
+- Corrected bug with "Edit media content" window
+- Corrected bug with "Web video" function
+- Corrected bug on Shutter Encoder launch
+- Corrected bugs with preset saving
+- Various corrections
+- Various improvements
+      </description>
+    </release>
+  </releases>
+</component>
