@@ -4,7 +4,7 @@
 ####
 app-id: org.paulpacifico.ShutterEncoder
 runtime: org.freedesktop.Platform
-runtime-version: &runtime-version '22.08'
+runtime-version: &runtime-version '23.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk
@@ -65,8 +65,8 @@ modules:
       - PREFIX=/app
     sources:
       - type: archive
-        url: https://github.com/FFmpeg/nv-codec-headers/archive/n9.0.18.1.tar.gz
-        sha256: 6181a5dac66a6990aa3baf10a77ae677f372b9068be9ef73abfd37b73fb4c745
+        url: https://github.com/FFmpeg/nv-codec-headers/archive/n11.1.5.3.tar.gz
+        sha256: 7e7fe9ecd3cb517698a7dde7885935f8616d13c6382dfd722bf3652a985d7fe1
     cleanup: ['*']
   - name: ffmpeg
     config-opts:
@@ -85,8 +85,8 @@ modules:
       - --enable-cuvid
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz
-        sha256: cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4
+        url: https://ffmpeg.org/releases/ffmpeg-5.1.4.tar.xz
+        sha256: 54383bb890a1cd62580e9f1eaa8081203196ed53bde9e98fb6b0004423f49063
     post-install:
       - install -p -D -m 0644 COPYING* "LICENSE.md" -t "${FLATPAK_DEST}/share/licenses/ffmpeg/";
     cleanup:
@@ -95,8 +95,11 @@ modules:
     buildsystem: cmake
     build-options:
       env:
-        JAVA_HOME: /usr/lib/sdk/openjdk/jvm/openjdk-20
-        JAVA_COMPILER: /usr/lib/sdk/openjdk/jvm/openjdk-20/bin/javac
+        JAVA_HOME: /usr/lib/sdk/openjdk/jvm/openjdk-21
+        JAVA_COMPILER: /usr/lib/sdk/openjdk/jvm/openjdk-21/bin/javac
+    config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
+      - -DCMAKE_INSTALL_BINDIR=bin
     post-install:
       - cp src/contents/icon.png org.paulpacifico.ShutterEncoder.png
       - install -Dm644 org.paulpacifico.ShutterEncoder.desktop -t /app/share/applications
@@ -105,7 +108,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/paulpacifico/shutter-encoder.git
-        tag: "17.1"
+        tag: "17.7"
       - type: file
         path: CMakeLists.txt
       - type: file

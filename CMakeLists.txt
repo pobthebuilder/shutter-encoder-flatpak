@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.5)
 
 find_package(Java REQUIRED)
 include(UseJava)
@@ -12,7 +12,6 @@ set(CMAKE_JAVA_COMPILE_FLAGS "-source" "17" "-target" "17")
 add_jar(ShutterEncoder 
     SOURCES
     src/application/Console.java
-    src/application/FocusTraversalOnArray.java
     src/application/Ftp.java
     src/application/Functions.java
     src/application/GOP.java
@@ -35,7 +34,6 @@ add_jar(ShutterEncoder
     src/application/Utils.java
     src/application/VideoPlayer.java
     src/application/VideoWeb.java
-    src/application/Wetransfer.java
     src/functions/AudioEncoders.java
     src/functions/AudioNormalization.java
     src/functions/BlackDetection.java
@@ -57,13 +55,12 @@ add_jar(ShutterEncoder
     src/library/DVDAUTHOR.java
     src/library/EXIFTOOL.java
     src/library/FFMPEG.java
-    src/library/FFPLAY.java
     src/library/FFPROBE.java
     src/library/MEDIAINFO.java
-    src/library/MKVMERGE.java
+    src/library/NCNN.java
+    src/library/PDF.java
     src/library/SEVENZIP.java
     src/library/TSMUXER.java
-    src/library/XPDF.java
     src/library/YOUTUBEDL.java
     src/settings/AdvancedFeatures.java
     src/settings/AudioSettings.java
@@ -84,10 +81,7 @@ add_jar(ShutterEncoder
     src/contents/avid.png
     src/contents/complete.wav
     src/contents/davinci.png
-    src/contents/donate_EN.png
-    src/contents/donate_FR.png
     src/contents/error.wav
-    src/contents/header.png
     src/contents/help.svg
     src/contents/help_hover.svg
     src/contents/help_pressed.svg
@@ -121,41 +115,42 @@ add_jar(ShutterEncoder
     src/contents/settings_pressed.svg
     src/contents/stream.svg
     src/contents/unlock.svg
-    src/contents/wetransfer.svg
     INCLUDE_JARS
     lib/activation.jar
     lib/commons-io-2.5.jar
     lib/commons-net-3.5.jar
-    lib/flatlaf-3.0.jar
-    lib/flatlaf-extras-3.0.jar
+    lib/flatlaf-3.2.1.jar
+    lib/flatlaf-extras-3.2.1.jar
     lib/javax.mail.jar
     lib/jgoodies-common-1.8.0.jar
     lib/jgoodies-forms-1.8.0.jar
     lib/jnativehook-2.2.1.jar
     lib/jsoup-1.9.1.jar
+    lib/jsvg-1.0.0.jar
+    lib/pdfbox-app-2.0.28.jar
     lib/slf4j-api-1.7.9.jar
     lib/slf4j-simple-1.7.9.jar
-    lib/svgSalamander-1.1.2.4.jar
     lib/swt-x86.jar
     lib/swt.jar
     ENTRY_POINT
     application.Shutter)
 
 install_jar(ShutterEncoder /app/bin)
-include(GNUInstallDirs)
+#include(GNUInstallDirs)
 install(FILES lib/activation.jar
               lib/commons-io-2.5.jar
               lib/commons-net-3.5.jar
-              lib/flatlaf-3.0.jar
-              lib/flatlaf-extras-3.0.jar
+              lib/flatlaf-3.2.1.jar
+              lib/flatlaf-extras-3.2.1.jar
               lib/javax.mail.jar
               lib/jgoodies-common-1.8.0.jar
               lib/jgoodies-forms-1.8.0.jar
               lib/jnativehook-2.2.1.jar
               lib/jsoup-1.9.1.jar
+              lib/jsvg-1.0.0.jar
+              lib/pdfbox-app-2.0.28.jar
               lib/slf4j-api-1.7.9.jar
               lib/slf4j-simple-1.7.9.jar
-              lib/svgSalamander-1.1.2.4.jar
               lib/swt-x86.jar
               lib/swt.jar
         DESTINATION ${CMAKE_INSTALL_LIBDIR})
