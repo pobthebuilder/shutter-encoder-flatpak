@@ -14,6 +14,12 @@ Usage
 2. Build your package, and export to a distributable single file installer:
 ```
 flatpak-builder --force-clean --repo=.repo .build-dir org.paulpacifico.ShutterEncoder.yaml
+flatpak --user remote-add --no-gpg-verify shutterencoder-repo .repo
+flatpak --user install shutterencoder-repo org.paulpacifico.ShutterEncoder.yaml
+```
+
+To create a single file redistributable bundle:
+```
 flatpak build-bundle .repo shutter-encoder.flatpak org.paulpacifico.ShutterEncoder
 flatpak install shutter-encoder.flatpak
 ```
