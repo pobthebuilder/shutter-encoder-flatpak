@@ -49,7 +49,24 @@
   </provides>
 
   <releases>    
-    <release version="18.0" date="2024-03-20">
+    <release version="18.1" date="2024-05-03">
+          <description>
+             - Added "Do not upscale lower resolutions" checkbox to "Settings" window
+- Added "Keep source audio tracks" with "Replace audio" function
+- Added "Disable video player" checkbox to "Settings" window
+- Added "Zoom" option to "Image adjustment" section
+- Improved "File size" algorithm for "Output codecs"
+- Corrected bug with "Broadcast codecs"
+- Corrected bug with RAW image format
+- Corrected bug with "Extract" function
+- Corrected bug with "Web video" function
+- Corrected bug with "Replace audio" function
+- Corrected bug with "Change the sample rate" checkbox
+- Corrected bug with "Automatically wait for file to be a ready" checkbox
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="18.0" date="2024-03-20">
           <description>
              - Added presets positions for "Add image / video as watermark" section
 - Improved "Add image / video as watermark" between different media scales
