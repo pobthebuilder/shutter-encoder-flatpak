@@ -54,9 +54,9 @@ modules:
       - /lib/pkgconfig
       - /lib/*.la
     sources:
-      - type: archive
-        url: https://mediaarea.net/download/source/libmediainfo/23.03/libmediainfo_23.03.tar.xz
-        sha256: f57afffd76c6f9569ceb1e778fce834508eb0289bdeb62181143804aa3a6c098
+      - type: git
+        url: https://github.com/MediaArea/MediaInfoLib.git
+        tag: v23.03
   - name: libass
     sources:
       - type: archive
