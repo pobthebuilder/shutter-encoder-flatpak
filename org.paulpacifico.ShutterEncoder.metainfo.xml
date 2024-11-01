@@ -49,7 +49,26 @@
   </provides>
 
   <releases>    
-    <release version="17.9" date="2024-02-08">
+    <release version="18.0" date="2024-03-20">
+          <description>
+             - Added presets positions for "Add image / video as watermark" section
+- Improved "Add image / video as watermark" between different media scales
+- Improved "Add image / video as watermark" -&gt; file path saved
+- Improved "Display timecode" between different media scales
+- Improved "Extract" function with 'audio' mode
+- Improved "Loudness &amp; True Peak" function
+- Improved audio sample rate selection
+- Improved reduced window display
+- Improved audio codecs metadata
+- Corrected bug with "H.265" function and "Intel Quick Sync"
+- Corrected bug with "Force display" checkbox on Windows
+- Corrected bug with "Approximate file size" option
+- Corrected bugs with oriented media
+- Corrected bugs with "AI" scaling
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="17.9" date="2024-02-08">
           <description>
              - Added GPU encoding for '.avif' format
 - Added '.j2k' extension for "Image" function

@@ -108,7 +108,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/paulpacifico/shutter-encoder.git
-        tag: "17.9"
+        tag: "18.0"
       - type: file
         path: CMakeLists.txt
       - type: file
