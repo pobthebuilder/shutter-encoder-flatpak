@@ -49,7 +49,27 @@
   </provides>
 
   <releases>    
-    <release version="18.2" date="2024-06-12">
+    <release version="18.3" date="2024-07-11">
+          <description>
+             - Added Latin language thanks to JEFE01
+- Added Hungarian language thanks to FowlerJohn
+- Added presets for "Add a suffix" checkbox
+- Added 'Mix' option for video player audio
+- Added "Preserve folder hierarchy" checkbox for "Rewrap" function
+- Added "Preserve folder hierarchy" checkbox for "Audio normalization" function
+- Added "Generate hash" option from the file list
+- Ability to select compression with '.png' format
+- Improve presets loading
+- Corrected bug with zoom adjustment
+- Corrected bug with timecode metadata
+- Corrected bug with "Rotation" checkbox
+- Corrected bug with "Image cropping" section
+- Corrected bug with "Add image / video as watermark"
+- Corrected bug with UI glitches
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="18.2" date="2024-06-12">
           <description>
              - Added Arabic language thanks to ahmed-0011
 - Improved "Sound conversions" encoding speed

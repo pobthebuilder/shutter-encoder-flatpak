@@ -16,6 +16,7 @@ add_jar(ShutterEncoder
     src/application/Functions.java
     src/application/GOP.java
     src/application/GlobalKeyListener.java
+    src/application/HashGenerator.java
     src/application/Informations.java
     src/application/RecordInputDevice.java
     src/application/ReducedWindow.java
