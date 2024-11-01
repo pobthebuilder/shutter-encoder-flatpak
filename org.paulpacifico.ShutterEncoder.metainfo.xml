@@ -49,7 +49,20 @@
   </provides>
 
   <releases>    
-    <release version="18.3" date="2024-07-11">
+    <release version="18.4" date="2024-08-12">
+          <description>
+             - Added "H.266" codec
+- Corrected display issues
+- Corrected bug with subtitles display
+- Corrected bug with "Replace audio" function
+- Corrected bug with "Image sequence" et AI upscale
+- Corrected bug with "Add image / video as watermark"
+- Corrected bug with "Display timecode" and High-DPI screen
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffprobe
+          </description>
+        </release><release version="18.3" date="2024-07-11">
           <description>
              - Added Latin language thanks to JEFE01
 - Added Hungarian language thanks to FowlerJohn
