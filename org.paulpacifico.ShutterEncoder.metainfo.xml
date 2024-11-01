@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2013 First Lastname <your@email.com> -->
 <component type="desktop-application">
   <id>org.paulpacifico.ShutterEncoder</id>
   <metadata_license>FSFAP</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
+  <project_license>LicenseRef-proprietary</project_license>
   <name>Shutter Encoder</name>
-  <summary>A converter designed by video editors. The professional compression tool accessible to all.</summary>
+  <summary>A converter designed by video editors</summary>
 
   <description>
-    <p>Shutter Encoder is one of the best video converter software, it handles images and audio too!  It has been designed by video editors in order to be as accessible and efficient as possible.  Shutter Encoder makes use of FFmpeg to handle its encoding, allowing support for almost every codec you’ve ever heard of, and many more you haven’t.  Don’t just take our word for it though, Avid themselves recommend Shutter Encoder as part of your Media Composer and ProTools ingesting workflow! </p>
+    <p>
+      
+    </p>
   </description>
 
   <launchable type="desktop-id">org.paulpacifico.ShutterEncoder.desktop</launchable>
@@ -17,39 +18,175 @@
     <screenshot type="default">
       <caption>Player</caption>
       <image>https://www.shutterencoder.com/images/en/Player.png</image>
-    </screenshot>
-    <screenshot>
+     </screenshot>
+     <screenshot>
       <caption>Color</caption>
       <image>https://www.shutterencoder.com/images/en/Color.png</image>
-    </screenshot>
-    <screenshot>
+     </screenshot>
+     <screenshot>
       <caption>Crop</caption>
       <image>https://www.shutterencoder.com/images/en/Crop.png</image>
-    </screenshot>
-    <screenshot>
+     </screenshot>
+     <screenshot>
       <caption>Overlay</caption>
       <image>https://www.shutterencoder.com/images/en/Overlay.png</image>
-    </screenshot>
-    <screenshot>
+     </screenshot>
+     <screenshot>
       <caption>Burn Subtitles</caption>
       <image>https://www.shutterencoder.com/images/en/BurnSubtitles.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Watermark</caption>
-      <image>https://www.shutterencoder.com/images/en/Watermark.png</image>
-    </screenshot>
-  </screenshots>
-
+     </screenshot>
+     <screenshot>
+       <caption>Watermark</caption>
+       <image>https://www.shutterencoder.com/images/en/Watermark.png</image>
+     </screenshot>
+   </screenshots>
+ 
   <url type="homepage">https://www.shutterencoder.com/</url>
   <project_group>Paul Pacifico</project_group>
-  <provides>
+
+   <provides>
     <binary>ShutterEncoder.jar</binary>
   </provides>
 
-  <releases>
-    <release version="17.1">
-      <description>
-- Added ".apng" extension for the "Image" function
+  <releases>    
+    <release version="17.8" date="2024-01-11">
+          <description>
+             - Added "Add a suffix" checkbox for outputs section
+- Added "Create a subfolder" checkbox for outputs section
+- Added "Audio normalization" checkbox to "Sound conversions"
+- Added "Add subtitles" section for "DVD" and "Blu-ray" functions
+- Improved "Rewrap" function for HEVC source file
+- Corrected invisible window at startup
+- Corrected bugs with "Broadcast codecs"
+- Corrected bug with remaining time display
+- Corrected bug with multichannel and "OPUS"
+- Corrected bug with "Replace audio" function
+- Corrected bug with "Rename the file(s)" option
+- Corrected bug with "Force interlacing" checkbox
+- Corrected bug with "Automatically wait for file to be ready" checkbox and "Watch folder"
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffprobe
+          </description>
+        </release><release version="17.7" date="2023-11-17">
+          <description>
+             - Added "Audio normalization" checkbox for all video functions
+- Added more download options for "Web video" function
+- Added a scrollbar for the "Settings" panel
+- Ability to shrink the UI to a smaller size
+- Corrected bug with "AI" scaling &amp; audio offset
+- Corrected bug with "Replace audio" function
+- Corrected bug for "Add subtitles" checkbox
+- Corrected bug with "MP3" function
+- Improved "Add watermark" checkbox
+- Improved ".webp" &amp; ".gif" format
+- Various corrections
+          </description>
+        </release><release version="17.6" date="2023-10-17">
+          <description>
+             - Added "Set GPU filtering to" option for Mac
+- Ability to burn subtitles in batch
+- Ability to choose the audio track for "Video Player"
+- Ability to use "auto" value for "Image cropping" in batch
+- Improved "Video Player"
+- Improved waveform loading
+- Improved "AV1" "Max. Quality" option with "Nvidia NVENC"
+- Corrected bug with "H.264" and high fps input
+- Corrected bug with "Pause" button on Windows
+- Corrected freeze with "Web video" function
+- Corrected bug with 10-bit source file
+- Corrected bugs for "Video Player"
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffprobe for Mac
+- Updated UI core
+          </description>
+        </release><release version="17.5" date="2023-09-22">
+          <description>
+             - Added "Rotation" checkbox for "Rewrap" function
+- Improved '.webp' format
+- Corrected bug with "AI" scaling
+- Corrected bug with '.gif' format
+- Corrected bug with screenshot icon
+- Corrected bug with multiple monitors
+- Corrected bug with "auto" cropping mode
+- Corrected bug with '.vtt' subtitle format
+- Corrected bug with "Add subtitles" section
+- Corrected bug with "Load at startup" option
+- Corrected bug with "Cut without re-encoding" function
+- Removed "WeTransfer" output
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="17.4" date="2023-08-30">
+          <description>
+             - Added "XDCAM HD 35" codec
+- Added "AI 2D" &amp; "AI 3D" scales
+- Added capture icon for "Image" section
+- Added "Show waveform" checkbox for "Video Player"
+- Added "Add subtitles" section for "Rewrap" function
+- Added "Gamma level" checkbox in "Colorimetry" section
+- Added "Set film grain denoise" checkbox for "AV1" function
+- Improved timecode metadata for output codecs
+- Improved AAC encoding quality on Mac
+- Improved file metadata loading
+- Corrected audio crackling sound
+- Corrected bugs with High-DPI screens
+- Corrected bug with variable frame rate
+- Corrected "Video Player" display issues
+- Various corrections
+- Various improvements
+- Updated UI core
+          </description>
+        </release><release version="17.3" date="2023-07-18">
+          <description>
+             - Redesigned UI and theme
+- Added 'MaxCLL' &amp; 'MaxFALL' options for HDR
+- Added "Preserve folder hierarchy" checkbox for "JPEG" &amp; "Image" functions
+- Ability to preview all settings into the "Video Player"
+- Improved "Video player" window performance
+- Improved "Display" checkbox
+- Improved "Watch Folder"
+- Improved UI animations
+- The "Render queue" now only adds selected files
+- Input and output points are now saved for each file
+- Moved all GPU accelerations into the bottom bar
+- Corrected bug with 'Convert from' checkbox with audio codecs
+- Corrected bug with preset loading with 'CQ' mode
+- Corrected bugs with "Replace audio" function
+- Corrected bug with "Transitions" section
+- Corrected bug with "Web video" function
+- Corrected window flickering on Mac
+- Corrected bug with '.gif' format
+- Corrected freezing bugs
+- Various corrections
+- Various improvements
+- Removed xpdfreader dependency
+- Removed mkvmerge dependency
+- Removed ffplay dependency
+- Updated ffmpeg, ffprobe
+- Updated UI core
+          </description>
+        </release><release version="17.2" date="2023-06-07">
+          <description>
+             - Added Czech language thanks to Martin ChvÃ¡tal
+- Added "Maximum" option for "H.264" &amp; "H.265" functions
+- Added "Dolby Digital Plus" audio codec with "Blu-ray" function
+- Added "Rec. 2020 HLG 10bits" colorspace for "H.265", "VP9" &amp; "AV1 functions
+- Ability to set input and output points with "Conform" function
+- Ability to set "H.265" function to lossless using 'CQ' '0'
+- Improved "Edit media content" window performance &amp; rendering
+- Moved "Transitions" section to "Edit media content" window
+- Corrected waveform issue with "Subtitling" function
+- Corrected bug on timecode metadata reading
+- Corrected bug with input and output points
+- Corrected freezing bugs
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="17.1" date="2023-05-02">
+          <description>
+             - Added ".apng" extension for the "Image" function
 - Ability to preview transitions with "Edit media content" window
 - Ability to select the audio codec for editing and broadcast codecs
 - Ability to select audio sample rate for editing and broadcast codecs
@@ -63,7 +200,1490 @@
 - Corrected bugs with preset saving
 - Various corrections
 - Various improvements
-      </description>
-    </release>
+          </description>
+        </release><release version="17.0" date="2023-04-18">
+          <description>
+             - Added ".gif" extension for the "Image" function
+- Added "AMD AMF Encoder" support with "AV1" function
+- Added "Use GPU" checkbox with "Video player" window
+- Added "CBR" encoding with "Nvidia NVENC" hardware acceleration
+- Added "Preserve metadata" checkbox for the "Web video" function
+- Ability to choose the ".tif" compression algorithm
+- Improved "Video player" window performance &amp; quality
+- Improved "Display timecode" accuracy
+- Improved "Image capture" button
+- Improved framerate detection
+- Corrected bugs with "Web video" function
+- Corrected bug with "yadif x2" deinterlacing
+- Corrected bug with "Cut without re-encoding" function
+- Corrected bug with "DVD" function and NTSC frame rate
+- Corrected bug with "Replace audio" function using "shortest" mode
+- Corrected bug with "Hardware acceleration" checkbox with older Nvidia GPU
+- Updated Java version
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, youtube-dl
+          </description>
+        </release><release version="16.9" date="2023-03-09">
+          <description>
+             - Added "ALAC" function
+- Added "Force display" checkbox for "Rewrap" function
+- Added scale options with auto width or height values
+- Improved "Disable animations" checkbox and scrolling
+- Improved "Watch Folder" option with search for subfolders
+- Improved "Video Player" window with Drop Frame and NDF Timecode
+- Improved "Web video" function with thumbnail and metadata download
+- Improved support for "Hardware acceleration" with older Nvidia GPU
+- Improved "Watch Folder" option by supporting multiple input folders
+- Corrected NTSC frame rate metadata
+- Corrected bug with LUT preview and image sequence
+- Corrected bug with "DVD" function and input aspect
+- Corrected bug with "DVD" function and NTSC frame rate
+- Corrected bug with "Web video" function and Twitter URL
+- Corrected bug with "Video Player" window and preset loading
+- Corrected bug with "Preserve subtitles" checkbox and ass subtitles
+- Corrected bug with "DNxHD" and "XDCAM HD422" functions with burning subtitles
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="16.8" date="2023-02-01">
+          <description>
+             - Added "VMAF" function
+- Added "Set film grain to" for "AV1" function
+- Added "Enable alpha channel" for "H.265" function on Mac
+- Added "good" and "best" values for "Video bitrate" with output codecs
+- Ability to output real interlacing with "H.264" and "H.265" functions
+- Corrected bug with "CQ" mode using "AV1" function
+- Corrected "Audio normalization" bug
+- Various corrections
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="16.7" date="2023-01-05">
+          <description>
+             - Added "True Peak" &amp; "LRA" checkboxes with "Audio normalization" function
+- Added "Generate in OP-Atom format" checkbox with "XDCAM HD422" function
+- Added "AAC" audio codec with "AV1","VP9","VP8" functions
+- Added "auto" value for "Video bitrate" with output codecs
+- Added "Force tune" checkbox with "AV1" function
+- Updated UI core
+- Corrected bug with audio files using attached picture
+- Corrected bug when encoding a downloaded video
+- Corrected "Audio normalization" bugs
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="16.6" date="2022-12-13">
+          <description>
+             - Added "Set GPU filtering to:" from "Settings" window
+- Added "Hardware acceleration" with "AV1" function
+- Added "Enable DRC" checkbox for audio codecs
+- Improved greatly encoding speed when changing scale with filters
+- Improved "Video Player" window
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="16.5" date="2022-11-09">
+          <description>
+             - Added Japanese language thanks to çæãªãµ (Nafu Satsuki)
+- Added "Force interlacing" checkbox for "Blu-ray" function
+- Added "Auto" pre-settings for "Image cropping" section
+- Added "384" &amp; "448" values for AAC encoding
+- Ability to use "Replace audio" function in batch (1st video, 2nd audio and so on)
+- Ability to download multiple URLs with the "Web video" function
+- Ability to use Ctrl + i to open "File(s) information..." window
+- Ability to use ratio for "Image cropping" section
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="16.4" date="2022-10-09">
+          <description>
+             - Added Swedish language thanks to Ãke Engelbrektson
+- Added Chinese traditional language thanks to Bise Chen
+- Added "Enable fast decode" checkbox for "AV1" function
+- Ability to use "Mix audio files to" with 5.1 source file
+- Ability to select nits value for HDR colorspaces
+- Corrected bug with "Total length of files" option
+- Corrected bug with framerate detection
+- Corrected bug with "Merge" function
+- Corrected Java error at startup
+- Various improvements
+          </description>
+        </release><release version="16.3" date="2022-09-12">
+          <description>
+             - Rebuilt 'Extract' function
+- Added 'Image' section to output codecs
+- Added '.avif' format to 'Image' function
+- Added 'Preview' combobox to 'Edit media content' window
+- Added 'Vu-meter' checkbox to 'Edit media content' window
+- Added 'Set framerate mode' checkbox to 'Settings' window
+- Added 'Set entropy coding to CAVLC' checkbox for 'H.264' function
+- Ability to play an image sequence from 'Edit media content' window
+- Corrected bug with 'Watch folder' and 'Edit media content' window
+- Corrected bug with 'Display video's internal timecode' checkbox
+- Corrected bug with 'Web video' function on Mac Apple silicon
+- Corrected bug with 'Rewrap' function for the mxf format
+- Corrected bugs with subtitles burning
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, yt-dlp
+          </description>
+        </release><release version="16.2" date="2022-08-01">
+          <description>
+             - Improved UI
+- Added 'Split' mode to 'Edit media content' window
+- Corrected bug with alpha detection on VP8 source codec
+- Corrected bug with subtitles burning when changing scale
+- Corrected bug with 'Audio normalization' using mono files
+- Corrected bug with RAW files using 'Edit media content' window
+          </description>
+        </release><release version="16.1" date="2022-06-18">
+          <description>
+             - Added "Preserve metadata" checkbox for "Merge" function
+- Improved "Image adjustment" accuracy
+- Corrected save and load presets bug
+- Corrected input and output points bug
+- Corrected drop frame timecode interpretation
+- Corrected "Speed" slider bug with audio content
+- Corrected bugs with keyboard values for "Edit media content" window
+- Removed temporarily "Enable alpha channel" for "H.265" function
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, yt-dlp
+          </description>
+        </release><release version="16.0" date="2022-05-13">
+          <description>
+             - Added Polish &amp; Vietnamese languages
+- Added "25%" &amp; "50%" scaling options
+- Added value "300" to "XAVC" function
+- Added "Load at startup:" checkbox from "Settings" window
+- Added "Preserve subtitles" checkbox for "Cut without re-encoding" function
+- Added "Preserve metadata" checkbox for "Cut without re-encoding" function
+- Rebuilt &amp; Optimized "Video Player" window
+- Renamed "Change input and output point" to "Edit media content" 
+- All display windows are grouped in the "Edit media content" window
+- Corrected "Web video" download bug
+- Corrected bug with "Activate the image sequence to:"
+- Various corrections
+- Improved "Watch folder"
+- Improved &amp; Simplified UI
+- Improved interlacing detection
+- Various improvements
+
+/!\ Your saved presets may not work properly, please update them.
+          </description>
+        </release><release version="15.9" date="2022-02-24">
+          <description>
+             - Added Ukrainian language thanks to ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ°ÑÐºÐ°
+- Added "Hide file list path" from "Settings" window
+- Added "Gamma" slider for "Image adjustement" window
+- Added "Preserve metadata" checkbox for "Rewrap" function
+- Added "Generate in OP-Atom format" checkbox for "Rewrap" function
+- Added "Cut" button for "Subtitling" function
+- Ability to use "Edit all text" window with "Subtitling" timeline
+- Ability to use percentage values for scaling video
+- Rebuilt "Cut detection" function
+- Improved "Conform" function
+- Improved "AV1" default quality
+- Corrected bug with EXR input gamma curve
+- Corrected bug with "Record screen/device" inputs on Windows
+- Corrected bug with "XAVC" function thanks @Christophe_Nelson
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="15.8" date="2022-01-20">
+          <description>
+             - Added Russian language thanks to ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÐ°ÑÐºÐ°
+- Added "Hardware acceleration" with "Apple ProRes" for M1 Pro/Max
+- Ability to resize the main window vertically
+- Ability to store settings.xml into the app folder on Windows
+- Improved "Image sequence" -&gt; no longer require sequential naming
+- Improved "Image sequence" -&gt; supports different source file locations
+- Improved "Extract" function
+- Corrected bug with "Web video" function
+- Corrected bug with "Nvidia NVENC" hardware acceleration
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, yt-dlp
+          </description>
+        </release><release version="15.7" date="2021-12-22">
+          <description>
+             - Added Slovenian language thanks to Martin Srebotnjak
+- Added "Work during inactivity" checkbox on Mac Apple Silicon
+- Added "Enable alpha channel" for "H.265" function on Mac
+- Added "Set GOP to:" checkbox to "MPEG-1" function
+- Added "MP3" audio codec for output codecs
+- Improved "VP8" and "VP9" multithreading
+- Improved timecode detection
+- Removed "Shutter Encoder" from context menu
+- Corrected bug with fade-in/out transitions
+- Corrected bug with "CQ" mode with "H.265" on "Nvidia NVENC" hardware acceleration
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, yt-dlp
+          </description>
+        </release><release version="15.6" date="2021-11-16">
+          <description>
+             - Added "Dolby Digital Plus" function
+- Added "Dolby TrueHD" function
+- Added "MPEG-2" function
+- Added "4:2:2" colorspaces with "MPEG-2" function
+- Added "Set GOP to:" checkbox to "MPEG-2" function
+- Added "Exposure smoothing" checkbox to output codecs
+- Added "Preserve subtitles" checkbox to "Rewrap" function
+- Added "Disable minimized window" to "Settings" window
+- Added "Set chunks to:" checkbox to "HAP" function
+- Added "Speed" slider to "Video player" window
+- Ability to choose "RGB" type for "Uncompressed" function
+- Corrected bug with "CQ" mode on "Nvidia NVENC" hardware acceleration
+- Corrected rotation bug with "Image adjustement" window
+- Corrected bug with "Stabilize image" checkbox 
+- Corrected bugs with "Video player" window
+- Improved timecode detection
+- Various corrections
+- Various improvements
+- Updated youtube-dl -&gt; yt-dlp
+          </description>
+        </release><release version="15.5" date="2021-10-05">
+          <description>
+             - Added "Preserve folder hierarchy" checkbox with audio codecs
+- Added support for UTF-8 BOM subtitles
+- Added support for .ts file format
+- Added "w3fdif" deinterlacer
+- Ability to embed multiple subtitles
+- Improved "Subtitling" function
+- Improved "Watch folder" algorithm
+- Improved icons for High-DPI scaling
+- Improved "Video player" with "Cut without re-encoding" and "Rewrap" functions
+- Corrected bug with "DVD" and "Blu-ray" functions
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, youtube-dl
+          </description>
+        </release><release version="15.4" date="2021-09-15">
+          <description>
+             - Added Chinese language thanks to å¤§ç¼ä»~æ­ and xBLACKICEx
+- Added "VP8" codec
+- Added "2.1" for "Mix audio tracks to :" checkbox
+- Added "Audio settings" section to "Merge" function
+- Added 12bits colorspaces for "H.265", "VP9", "AV1" functions
+- Added "Preserve metadata" checkbox from "Advanced features" section
+- Corrected bug with "Display timecode" with "Change input and output point" 
+- Corrected "Process file list as Merge" with the "Transitions" section
+- Corrected timecode issues with drop frame rate thanks @Mike
+- Corrected bug with "Source in OP-Atom format" checkbox
+- Improved UI and animations
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="15.3" date="2021-08-01">
+          <description>
+             - Added German language
+- Added "Deflicker" checkbox with output codecs from "Corrections" section
+- Added "FLAC" &amp; "PCM" audio codecs for "H.264" &amp; "H.265" functions
+- Added 9 to 16 audio tracks from "Audio settings" section
+- Added creation date metadata to all video functions
+- Added "Shutter Encoder" in Windows context menu
+- Improved "Video Player" window &amp; RAM usage
+- Improved "Image ajdustement" window
+- Corrected "XDCAM HD422" bug with "Force interlacing" checkbox
+- Corrected bugs with "Video Player" window
+- Corrected bug with "CQ" mode on Mac
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="15.2" date="2021-07-01">
+          <description>
+             - Completely rebuilt "Video player" window
+- Added "CQ" option with Apple Silicon version
+- Improved stability, performance and accuracy of "Video player"
+- Improved performance and stability of "Subtitling" function
+- Improved performance of all display windows
+- Corrected "My functions" presets loading bugs
+- Corrected bug with RAW image on Mac Apple Silicon
+- Corrected "Create an image sequence from a video" bug with in/out points thanks @Victor Jantea
+- Removed VLC dependency
+- Reduced package size
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="15.1" date="2021-06-01">
+          <description>
+             - Added "Generate a timecode from date" checkbox
+- Added "Force display" checkbox with output codecs from "Image sequence"
+- Ability to choose ".webp" compression quality
+- Disk space shown inside the destination box
+- Corrected timecode bug with "WAV" function thanks @Brian Berdan
+- Corrected font selection bug with Apple Silicon version
+- Corrected WeTransfer tab bug with Mac Intel version
+- Corrected "Stabilize image" bug with "Apply a LUT"
+- Corrected "H.264" function bug 10bits GPU encoding
+- Corrected "Video player" window display issues
+- Corrected overlap bugs with fullscreen windows
+- Corrected update bug with Mac Intel version
+- Various improvements
+- Updated ffmpeg, ffprobe, ffplay
+
+PLEASE MAC USERS DOWNLOAD THIS VERSION FROM WEBSITE!
+          </description>
+        </release><release version="15.0" date="2021-05-06">
+          <description>
+             - Apple Silicon version available (Beta)
+- Added Dutch language thanks @Jacob Werkman
+- Added Portuguese language thanks @LÃ©o Saramago
+- Added Turkish language thanks @AygÃ¼n Yerdeniz
+- Added "Stabilise image" checkbox for output codecs
+- Added "Add subtitles" checkbox with "Rewrap" function
+- Abilty to embed ass/ssa subtitles
+- Ability to use .scc subtitles files
+- Ability to use "OPUS" audio codec for "H.264" and "H.265" codecs
+- Ability to remove OP-Atom hexadecimal suffix by using "Replace suffix by:" checkbox from settings
+- Corrected bug with NTSC framerates and mxf file creation
+- Corrected "Record screen/device" bugs on Mac
+- Corrected "Stabilise image" bug on Windows
+- Automatic detection of a new language (with xx.properties file)
+- Various improvements
+- Updated ffmpeg, ffprobe, ffplay
+          </description>
+        </release><release version="14.9" date="2021-04-02">
+          <description>
+             - Ability to use Italic and Bold on a single line with "Subtitling" function
+- Ability to close "Video Player" window with "Apply" button
+- Ability to use "Video Player" with "Replace audio" function
+- Ability to use "Audio normalization" with mp3 format
+- Ability to preview "Record screen/device"
+- Improved timer for "Watch folder" &amp; "Automatically wait for file to be ready"
+- Improved "Add subtitles" window with outline option
+- Improved "My functions" window
+- Corrected youtube-dl auto update bug on Mac
+- Corrected "Record screen/device" bugs
+- Corrected folder rights bugs on Mac
+- Corrected application startup bugs
+- Corrected WeTransfer bug
+- Removed BlackMagic options
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffprobe, ffplay
+          </description>
+        </release><release version="14.8" date="2021-03-04">
+          <description>
+             - Added "Limit output to 16-235" for editing and broadcast codecs
+- Added RGB tweaking for vibrance with "Image adjustement" window
+- Added white and black levels with "Image adjustement" window
+- Added "Film 3+" type for GoPro Cineform codec
+- Added ".exr" extension for "Image" function
+- Added "estdif" deinterlacer
+- Improved "Black detection" function
+- Corrected "Image ajdustement" bugs 
+- Corrected "Image cropping" bugs
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, youtube-dl
+          </description>
+        </release><release version="14.7" date="2021-02-16">
+          <description>
+             - Added Spanish language thanks @Kandi Valle
+- Added streaming output tab for "H.264" function
+- Added "Preserve subtitles" checkbox for output codecs
+- Added "White balance" &amp; "Tint" for "Image adjustement" window
+- Corrected bugs for "H.264" &amp; "H.265" functions with GPU
+- Corrected bugs for "Add subtitles" window
+- Corrected update bug
+- Improved "Image adjustement" window
+- Improved "Settings" window
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="14.6" date="2021-01-20">
+          <description>
+             - Added "Exclude extensions" checkbox from settings icon
+- Added "Yes to all", "No to all" options when the file already exists
+- Ability to record desktop audio with "Record screen/device" on Windows
+- Ability to use "Record screen/device" with "JPEG" and "Image" functions
+- Ability to rename extension with "Rename the file(s)" from the list
+- Corrected "Display timecode / file name / text" font bug on Mac
+- Corrected many bugs for "Record screen/device"
+- Corrected "Stabilize image" bug on Windows
+- Corrected "Add subtitles" video position
+- Disabled video player autoplay
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="14.5" date="2021-01-07">
+          <description>
+             - Ability to add "Record screen/device" into the list
+- Added "Preserve folder hierarchy" checkbox with output codecs
+- Corrected display bug with reduce &amp; update windows with High-DPI screens
+- Corrected "Force deinterlacing" bug with "x2" thanks @smushkan
+- Corrected "Hardware acceleration" bug with "CRF" mode
+- Corrected "Colorspace" bug with "H.265" on Mac/Linux
+- Corrected "Colorspace" bug with "H.264"
+- Corrected error window bug with Linux
+- Corrected bugs with "Subtitling" function
+- Improved "Subtitling" function
+- Improved Video player window
+- Improved settings window
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, youtube-dl, VLC
+          </description>
+        </release><release version="14.4" date="2020-12-02">
+          <description>
+             - Added "Rotation:" option with "Image adjustement" window
+- Ability to show "frames NÂ°" with "Overlay" window
+- Ability to use "Separate audio tracks to:" with 5.1 audio file
+- Ability to use .vtt subtitles with "Add subtitles" checkbox
+- Corrected bug with "Add subtitles" checkbox on Mac
+- Corrected timecode display for Retina screens
+- Switched timecode display over watermark
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, youtube-dl
+          </description>
+        </release><release version="14.3" date="2020-11-01">
+          <description>
+             - Added missing bitrates for "DNxHD" function
+- Added "Set GPU decoding to:" from settings icon
+- Added "Image" section for editing and broadcast codecs
+- Added "Convert levels:" checkbox in "Colorimetry" section
+- Added "Remove duplicate frames" checkbox for output codecs thanks @Gabriel Luz
+- Ability to choose ".mov" extension for "XDCAM HD422" and "AVC-Intra 100" functions
+- Ability to use .ass or .ssa subtitles file with "Add subtitles" checkbox
+- Abitity to choose video position with "Crop image..." checkbox
+- Ability to set language with embedded subtitles
+- Ability to change theme color
+- Improved overall theme
+- Improved "Rewrap" function
+- Improved "Render Queue" window
+- Corrected bug for "Enable fast start" checkbox thanks @Steven Giammaria
+- Corrected timecode display for High-DPI standard screens
+- Corrected update bug
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="14.2" date="2020-09-10">
+          <description>
+             - Redesign themes for a more responsive application
+- Added "422" &amp; "444" for "Force profile to:" checkbox with "H.264" &amp; "H.265" functions
+- Added "Force preset to:" enable with "Hardware acceleration:" checkbox
+- Added "Empty the list when process complete" checkbox from settings icon
+- Added "Disable animations" checkbox from settings icon
+- Added "Set scale mode to:" from settings icon
+- Added "Transitions" section for audio codecs
+- Added "Mono" option for "Audio settings" section
+- Added "Mono" option for "Mix audio tracks to:" checkbox
+- Ability to use "Nvidia NVENC" hardware acceleration for Linux 
+- Ability to display drop-frame timecode
+- Various improvements for "Video Player" thanks @Mark
+- Corrected unacessible windows with Linux Mint
+- Corrected timecode display with "Conform by:" checkbox
+- Corrected Linux drop shadow bugs
+- Corrected "CQ" encoding bitrate
+- Corrected "Render Queue" bug
+- Corrected various freezes
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="14.1" date="2020-08-15">
+          <description>
+             - Added "GoPro CineForm" function
+- Using SVT-AV1 codec for "AV1" function
+- Added "Audio settings" section for all audio codecs
+- Added "5.1" for "Mix audio tracks to :" checkbox
+- Added "detelecine" option for "Force deinterlacing :" checkbox
+- Added "Rec. 2020 PQ 10bits HDR", "Rec. 2020 HLG 10bits HDR" colorspaces for "H.265", "VP9", "AV1" functions
+- Added 10bits colorspaces for "H.264", "H.265", "VP9", "AV1" functions
+- Added "Force speed to :" checkbox for "VP9", "AV1" functions
+- Added "Set GOP to :" checkbox for "VP9", "AV1" functions
+- Added "Force profile to :" checkbox for "AV1" function
+- Added "Force quality to :" checkbox for "VP9" function
+- Added "Enable fast start" checkbox for "VP9" function
+- Added "Force tune to :" for "VP9" function
+- Added ".mp4" extension for "VP9" function
+- Improved colorspaces conversion &amp; quality
+- Corrected interlaced fields inversion bug
+- Corrected bugs with "Colorimetry" section for broadcast codecs
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe, mkvmerge
+- Switched to static binaries for Linux
+          </description>
+        </release><release version="14.0" date="2020-07-20">
+          <description>
+             - Added "Extract" function
+- Added "Transitions" section
+- Added "Colormatrix" checkbox in "Colorimetry" section
+- Added "Bitrates adjustement" section for "Blu-ray" function
+- Ability to choose "Copy" in "Audio settings" with output codecs
+- Ability to choose between "Cut" or "Extract" mode for the "Video player"
+- Ability to choose NTSC framerates for "Image sequence" section thanks @Marvin Claussen
+- Corrected bugs for "Image adjustement" window
+- Corrected display bugs for "Overlay" windows
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="13.9" date="2020-07-01">
+          <description>
+             - Added "Media offline detection" function
+- Added "Change the sample rate to :" checkbox for "WAV", "AIFF", "FLAC" functions
+- Ability to change video start with "Image adjustement" window
+- Ability to "Embed" .srt files
+- Ability to scroll settings panel
+- Corrected ratios and display for "Crop..." window
+- Corrected display for Japanese and Chinese text
+- Corrected updates bug on linux
+- Fully working on Linux Mint
+- Works on Mac OS Big Sur
+- Various corrections
+- Various improvements
+- Updated vlc
+          </description>
+        </release><release version="13.8" date="2020-06-01">
+          <description>
+             - Available for Linux OS
+- Added "Reduce banding" checkbox in "Corrections" section
+- Added Apple tag for "H.265" function thanks @David Rutgers
+- Added ".webm" extension for "AV1" function
+- Ability to set "bwdif" with "Force deinterlacing :" checkbox
+- Improved "Watch folder" thanks @Danny Van Spreuwel
+- Improved "Web video" function
+- Improved "Video player" window
+- Corrected deinterlacing filter thanks @David Rutgers
+- Corrected "Display" checkbox with "Force display to :" option
+- Corrected bug for "Rewrap" and "Cut without re-encoding" functions
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="13.7" date="2020-05-03">
+          <description>
+             - Added "Enable alpha channel" for "VP9" function
+- Added "CRF" encoding for "AV1" and "VP9" functions
+- Added "Set number of used threads" from settings icon
+- Added ".ico" and ".webp" formats with "Image" function
+- Added "Force preset to :" checkbox for "H.264" and "H.265" functions
+- Added "PCM 32Bits Float" for "WAV", "AIFF", "Rewrap", "Cut without re-encoding" "Replace audio" and "Audio normalization"
+- Ability to set Font, Color and Background Color for "Display timecode / file name / text"
+- Downmix 5.1 to stereo with the output codecs by default
+- Optimised "Subtitling" function
+- Corrected update error
+- Corrected bug for "Force display to :" checkbox
+- Corrected bug for "JPEG" function with "Create an image sequence from a video" checkbox
+- Auto unzip presets for "My functions" window
+- "End to End" function renamed to "Merge"
+- Various corrections
+- Various improvements
+- Updated ffmpeg, ffplay, ffprobe
+
+Download this version from website!
+          </description>
+        </release><release version="13.6" date="2020-04-05">
+          <description>
+             - Available in Italian translated by Roberto Boriotti
+- Added "Reverse" option for "Conform by :" checkbox
+- Added "CRF" encoding for "H.264" and "H.265" functions
+- Added "Rotate" option for "Image adjustement" window
+- Added "Add image / video as watermark" checkboxes for "Picture" and "JPEG" functions
+- Ability to crop any format with "Video cropping" window
+- Ability to set "settings.xml" file in "Users/*username*/Library/Preferences/Shutter Encoder/" on Mac
+- Optimised and corrected bugs for waveform loading with "Video player"
+- Optimised and corrected bugs for "Subtitling" function
+- Corrected bugs for "Image cropping" window
+- Corrected display bugs for all windows in overlay section and "Video player" window
+- Improved "Image adjustement" sliders
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="13.5" date="2020-03-23">
+          <description>
+             - Ajout de la case "Retouche d'image" dans la partie "ColorimÃ©trie"
+- Ajout de la case "Forcer l'affichage en :" dans la partie "FonctionnalitÃ©s avancÃ©es"
+- PossibilitÃ© d'agrandir la fenÃªtre "Rognage image"
+- Correction bug case "Afficher un timecode/nom du fichier/texte" sur OSX Catalina merci @Tom
+- Correction bug fonction "DV PAL" avec la partie incrustation
+- Correction bugs fonction "VidÃ©o web"
+- Correction bugs case "Rognage vidÃ©o"
+- Correction bugs divers
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="13.4" date="2020-03-10">
+          <description>
+             - Ajout du codec "AV1"
+- Ajout de la fonction "JPEG"
+- Ajout des profils 5.2 Ã  6.2 pour la fonctions "H.264"
+- Ajout du ratio "0.8" (4:5) et "1.91" pour la case "Rognage..."
+- Ajout des codecs "OPUS" et "OGG" dans la partie "RÃ©glages audio"
+- Ajout du 10bits et 12bits dans la partie "ColorimÃ©trie" pour les fonctions "VP9" et "AV1"
+- Ajout de l'extension ".mp4" pour la fonction "VP9"
+- Ajout de l'espace colorimÃ©trique "Rec. 2020 HLG"
+- PossibilitÃ© de vÃ©rifier le poids et la qualitÃ© de la fonction "JPEG" via l'icone de prÃ©visualisation
+- PossibilitÃ© de gÃ©nÃ©rer des fichiers au format "OP1a" avec les fonctions "DNxHD" et "DNxHR"
+- PossibilitÃ© d'utiliser la case "GÃ©nÃ©rer des fichiers au format OP-Atom" pour la fonction "DNxHR" sans audio
+- PossibilitÃ© de cocher la case "Conserver la hiÃ©rarchie des dossiers" avec "GÃ©nÃ©rer des fichiers au format OP-Atom"
+- PossibilitÃ© de placer le fichier "settings.xml" dans "/Library/Preferences/Shutter Encoder/" sur Mac
+- AmÃ©lioration de la fonction "Coupe sans compression" et "RÃ©encapsulage" pour les fichiers Long-GOP
+- TÃ©lÃ©chargement par dÃ©faut de la meilleure qualitÃ© vidÃ©o et audio pour la fonction "VidÃ©o web"
+- Fonction "WebM" renommÃ©e en "VP9"
+- Correction bugs "Mes Fonctions"
+- Corrections diverses
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="13.3" date="2020-02-21">
+          <description>
+             - Ajout de la fonction "OPUS"
+- Ajout du codec audio "OPUS" pour la fonction "WebM"
+- Ajout de la case "Afficher du texte :" pour la fenÃªtre "Incrustation"
+- Ajout de la case "DÃ©finir le GOP Ã  :" dans la partie "FonctionnalitÃ©s avancÃ©es"
+- PossibilitÃ© d'annuler l'extinction avec la case "Action de fin :"
+- PossibilitÃ© de dÃ©finir n'importe quelle rÃ©solution avec la case "Forcer la rÃ©solution en :"
+- AmÃ©lioration de l'accÃ¨s Ã  "Mes Fonctions..."
+- Correction bug case "Source au format OP-Atom"
+- Correction bug case "Afficher un timecode / nom du fichier"
+- Correction bugs divers
+- AmÃ©liorations diverses
+- Mise Ã  jour de ffmpeg, ffplay, ffprobe
+          </description>
+        </release><release version="13.2" date="2019-12-02">
+          <description>
+             - Ajout de l'accÃ©lÃ©ration matÃ©rielle pour la fonction "WebM" sur Windows
+- Ajout de la case "DÃ©sactiver les mises Ã  jour" dans l'icone paramÃ¨tres
+- Affichage du timecode interne pour "Visualiser sur BlackMagic"
+- Correction bug timecode fonctions "XDCAM HD422", "XAVC" et "AVC-Intra 100"
+- Correction bug fonction "Sous-Titrage"
+- Correction bugs Lecteur vidÃ©o
+- AmÃ©liorations diverses
+- Mise Ã  jour des drivers
+          </description>
+        </release><release version="13.1" date="2019-11-07">
+          <description>
+             - Ajout des boutons "G" et "I" pour la case "Ajouter des sous-titres"
+- Ajout de la partie "ColorimÃ©trie" pour la fonction "Image"
+- Ajout du thÃ¨me "Sombre" dans l'icone paramÃ¨tres
+- Ajout du codec "XAVC"
+- Correction bug timecode avec les codecs de montage merci @Chris Clough
+- Corrections bugs Lecteur vidÃ©o
+- Corrections bugs divers
+          </description>
+        </release><release version="13.0" date="2019-10-16">
+          <description>
+             - Ajout de la case "GÃ©nÃ©rer au format AS-10/AS-11" pour les codecs "XDCAM HD422" et "AVC-Intra 100"
+- Ajout de la metadonnÃ©e "tape" pour la gÃ©nÃ©ration de fichiers OP-Atom merci @Roee Bezalel
+- Ajout des boutons "&lt;" et "&gt;" pour "Visualiser sur BlackMagic"
+- PossibilitÃ© de normaliser les pistes A3 &amp; A4 pour la fonction "Normalisation audio"
+- Correction bug glissÃ©-dÃ©posÃ© sur OSX merci @FrÃ©dÃ©ric Dokhan
+- Corrections bugs "File d'attente de rendu"
+- Correction bug de dÃ©marrage sur Windows
+- Correction bug case "Rogner l'image"
+- Corrections bugs divers
+- Corrections diverses
+- Mise Ã  jour de java en version 13
+- Compatible Mac OSX 10.15 Merci aux testeurs @Omer Sipahi @Jean-Louis Bollotte @Alain Beaujean @Martin M.
+          </description>
+        </release><release version="12.9" date="2019-08-27">
+          <description>
+             - Ajout de la case "Forcer le rÃ©glage en :" pour les fonctions "H.264" et "H.265"
+- PossibilitÃ© de choisir de "Remplacer l'audio" au "plus court"/"plus long"
+- AmÃ©lioration case "Afficher un timecode" au format 24h merci @Fred Doc
+- AmÃ©lioration de l'accÃ¨s Ã  la "File d'attente de rendu"
+- AmÃ©liorations diverses
+- Correction bug case "Forcer la rÃ©solution en :" avec l'option "Rogner" sur Mac
+- Correction bugs divers
+- Mise Ã  jour des drivers
+- Mise Ã  jour de java en version 11
+          </description>
+        </release><release version="12.8" date="2019-08-01">
+          <description>
+             - Reprogrammation complÃ¨te de l'enregistrement et chargement pour "Mes fonctions..."
+- Ajout de la fonction "FLAC"
+- Ajout de la partie "ColorimÃ©trie" pour les codecs de sortie
+- Ajout de la case "Conserver la hiÃ©rarchie des dossiers" dans la partie "FonctionnalitÃ©s avancÃ©es"
+- Ajout de la case "Conformer par :" dans la partie "FonctionnalitÃ©s avancÃ©es"
+- Ajout de l'option "x2" pour la case "Forcer le dÃ©sentrelacement"
+- Ajout de l'option "Rogner" pour la case "Forcer la rÃ©solution en :"
+- Ajout des rÃ©solution UHD et 4K pour la case "Forcer la rÃ©solution en :"
+- Ajout du vu-mÃ¨tre pour la case "PrÃ©visualisation" avec le lecteur vidÃ©o
+- Ajout des waveforms pour le lecteur vidÃ©o
+- Ajout de l'option VBR/CBR pour les fonctions "H.264" et "H.265"
+- Outil "Filtre :" seulement en glissÃ©-dÃ©posÃ© -&gt; permet de l'utiliser plusieurs fois
+- AmÃ©lioration et correction bug case "Activer l'audio image par image" pour le lecteur vidÃ©o
+- AmÃ©lioration affichage waveform avec le lecteur vidÃ©o
+- Suppression de la case "Rogner 4K en UHD"
+- Suppression de la case "Limiter la sortie en 16-235"
+- Correction bug case "Afficher un timecode / nom du fichier" merci @Yann Le Cam 
+- Correction bug partie "Incrustation" sur Mac OSX
+- Correction bug fonction "Image" sur Mac OSX merci @Sulian Buineau
+- Correction bug fonction "AVC-Intra 100"
+- Correction bugs divers
+- Remerciement particulier @Scott Napier
+          </description>
+        </release><release version="12.7" date="2019-07-02">
+          <description>
+             - Ajout de la partie "RÃ©glages audio" pour les fonctions "Coupe sans compression", "DVD", "Blu-ray" et codecs de sortie
+- Ajout de la partie "SÃ©quence d'images" pour les fonctions "HAP", "XDCAM HD422", "FFV1" et "AVC-Intra 100"
+- Ajout de la case "Traiter la liste de fichiers en Bout Ã  Bout" dans l'icone paramÃ¨tres
+- Ajout de la case "Afficher un timecode / nom du fichier" pour les codecs de montage
+- Ajout de la case "Forcer l'inversion des trames" pour les codecs de montage
+- Ajout de la case "DÃ©calage :" pour la fonction "Remplacer l'audio"
+- Ajout du type "444" et "4444 XQ" pour la fonction "Apple ProRes"
+- Ajout de la fonction "MPEG" merci @Benjamin Florent
+- PossibilitÃ© de dÃ©finir la destination par dÃ©faut de chaque sortie dans l'icone paramÃ¨tres
+- PossibilitÃ© d'analyser les pistes A3 &amp; A4 pour la fonction "Loudness &amp; True Peak"
+- PossibilitÃ© de dÃ©finir la langue dans l'icone paramÃ¨tres
+- DÃ©sentrelacement automatique pour la fonction "DNxHR"
+- AmÃ©lioration outil "Ajouter un filigrane" avec un flux vidÃ©o
+- AmÃ©lioration de la qualitÃ© de rendu pour la case "Conformer la cadence Ã  :"
+- Entrelacement du 60p en 60i avec la case "Forcer l'entrelacement"
+- Correction bug case "Ajouter un filigrane" avec rÃ©solution 4K et UHD
+- Correction bug case "Forcer l'entrelacement" pour les vidÃ©os en 4:2:0 et 4:2:2 merci @Maxence RimÃ©
+- Correction bug quantization audio avec les codecs de montage merci @Fred Doc
+- Correction bug timecode "Visualiser sur BlackMagic"
+- Correction bug timecode avec les codecs de montage
+- Correction bug case "Miroir"
+- Correction bugs divers
+- Mise Ã  jour des drivers
+          </description>
+        </release><release version="12.6" date="2019-04-25">
+          <description>
+             - Ajout de la case "DÃ©fnir la fonction Bout Ã  Bout en Open-GOP" dans l'icone paramÃ¨tres
+- PossibilitÃ© de dÃ©finir la cadence vidÃ©o avec la case "CrÃ©er une sÃ©quence d'images depuis une vidÃ©o"
+- PossibilitÃ© de sÃ©lectionner plusieurs sous-titres pour la fonction "Sous-Titrage"
+- PossiblitÃ© de faire un retour avant avec la fonction "Sous-Titrage"
+- PossibilitÃ© de vÃ©rrouiller le poids pour les codecs de sortie
+- Corrections bugs case "Ajouter des sous-titres" merci Ã  Sulian Buineau
+- Correction bug fonction "Remplacer l'audio" avec l'option "Sans audio"
+- Correction bug "File d'attente de rendu" et multi-destinations
+- Correction bug case "Ajouter un filigrane"
+- Corrections bugs fonction "Sous-Titrage"
+- Correction bug fonction "DNxHD" sur Mac
+- Correction bug fonction "Bout Ã  bout"
+- AmÃ©liorations fonction "Sous-Titrage"
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="12.5" date="2019-02-23">
+          <description>
+             - IntÃ©gration de VLC directement dans Shutter Encoder
+- Ajout des codecs vidÃ©o "HAP", "AVC-Intra 100" et "FFV1"
+- Ajout de la partie "Timecode" pour les codecs de montage
+- Ajout de la partie "Message" pour la fenÃªtre "WeTransfer"
+- Ajout de la partie "RÃ©glages audio" pour la fonction "XDCAM HD422"
+- Ajout de la case "IncrÃ©mentation automatique" dans la partie "Timecode"
+- Ajout de la case "DÃ©marrage rapide" dans la partie "FonctionnalitÃ©s avancÃ©es"
+- Ajout des options "rÃ©solution:auto" et "auto:rÃ©solution" pour la fonction "Image"
+- Ajout des cases "Forcer la rÃ©solution en :" et "Rogner 4K en UHD" pour la fonction "XDCAM HD422"
+- AmÃ©lioration de l'icone de prÃ©visualisation pour les codecs de sortie -&gt; prend en charge tous les paramÃ¨tres
+- PossibilitÃ© de fermer Shutter encoder aprÃ¨s un encodage via le bouton paramÃ¨tres
+- PossibilitÃ© de dÃ©caler tous les sous-titres prÃ©cisement avec la fonction "Sous-Titrage"
+- PossibilitÃ© de dÃ©finir la largeur maximum des sous-titres dans la fenÃªtre "Ajouter des sous-titres"
+- PossibilitÃ© de dÃ©finir la position exacte pour l'incrustation de timecode et/ou nom du fichier
+- Prise en charge des fichiers Open-GOP pour la fonction "Bout Ã  bout" merci Ã  Mickael Lavignac
+- Prise en charge de tous les formats d'image pour les cases "Afficher un timecode", "Ajouter des sous-titres" et "Ajouter un filigrane"
+- Corrections bugs d'affichage cases "Ajouter des sous-titres", "Ajouter un filigrane" et "Rogner l'image"
+- Correction bug WeTransfer avec la case "Compte WeTransfer Plus" merci Ã  Yann Le Cam
+- Correction bug "File d'attente de rendu" avec la case "Visualiser"
+- Correction bug option "Adapter" avec les codecs de sortie
+- Corrections bugs fonction "VidÃ©o web"
+- Corrections diverses
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="12.4" date="2019-01-22">
+          <description>
+             - Ajout de la case "DÃ©sactiver le son de fin" et "Eteindre aprÃ¨s l'encodage" dans l'icone paramÃ¨tres
+- Ajout de la case "Ajouter un filigrane" pour les codecs de montage, "DVD" et "Blu-ray"
+- Ajout des onglets "WeTransfer", "FTP" et "E-mail" dans la partie "Destination"
+- Ajout du profil "high10" pour la fonction "H.264" et "H.265"
+- La partie "Affichage" devient "Incrustation"
+- PossibilitÃ© de dÃ©finir la "Position Y" avec la case "Ajouter des sous-titres" 
+- AmÃ©lioration de la qualitÃ© d'image par dÃ©faut pour la fonction "H.265"
+- AmÃ©liorations fonction "Sous-titrage"
+- AmÃ©liorations diverses
+- Correction bug case "Rogner l'image"
+- Corrections bugs fonction "Sous-titrage"
+- Correction bug case "Rognage..." avec les codecs de sortie
+- Corrections bugs partie "Affichage" avec les codecs de sortie
+- Correction bug case "Ajouter un filigrane" avec les codecs de sortie
+- Correction bug case "Ajouter des sous-titres" avec la fenÃªtre "File d'attente de rendu"
+- Correction bug fonction "Inserts vidÃ©o" -&gt; Fonction stable -&gt; possibilitÃ© d'intÃ©grer n'importe quel type de fichier comprenant un timecode
+          </description>
+        </release><release version="12.3" date="2018-12-29">
+          <description>
+             - Reprogrammation complÃ¨te de la fonction "Sous-titrage"
+- Ajout de l'icone paramÃ¨tres accessible en haut Ã  gauche
+- Ajout de la partie "RÃ©glages audio" pour les codecs de montage
+- Ajout de la case "Espace de couleurs :" dans la partie ColorimÃ©trie merci Ã  Jonathan DeNicholas
+- Ajout de la case "Anti-scintillement" dans la partie "Corrections"
+- Refonte et amÃ©lioration de la fenÃªtre "Ajouter des sous-titres" 
+- PossibilitÃ© de sÃ©lectionner les canaux audio dans la partie "RÃ©glages audio"
+- PossibilitÃ© d'avoir le temps Ã©coulÃ© en cliquant sur le temps restant
+- Case "Visualiser" accessible pour la fonction "Inserts vidÃ©o"
+- Correction bug fonction "Loudness &amp; True Peak"
+- Correction bug fonction "Normalisation audio"
+- Correction bug flux de sous-titres merci Ã  Daniel Chane
+- Correction bugs divers
+- Mise Ã  jour automatique de youtube-dl
+          </description>
+        </release><release version="12.2" date="2018-10-26">
+          <description>
+             - ImplÃ©mentation de MKVMERGE -&gt; Ajout de la fonction "Conformer"
+- ImplÃ©mentation de XPDF -&gt; Prise en charge des fichiers pdf pour la fonction "Image"
+- Ajout de la fonction "Uncompressed YUV"
+- Ajout de la case "Limiter la sortie en 16-235" dans la partie "Corrections"
+- Ajout de l'icone de visualisation pour la partie "ColorimÃ©trie"
+- Tri des la liste des fichiers avec la case "Activer la sÃ©quence d'images Ã  :"
+- PossibilitÃ© d'adapter automatiquement la rÃ©solution avec des bandes noires pour les codecs de montage
+- PossibilitÃ© de choisir texte sur 'Fond' ou 'Contour' avec la case "Ajouter des sous-titres"
+- PossibilitÃ© d'afficher le timecode/nom du fichier sur le haut ou le bas de l'image
+- PossibilitÃ© d'utiliser la case "Rognage..." avec la resolution sur 'Adapter' 
+- PossibilitÃ© de sÃ©lectionner audio "Source" pour la fonction "XDCAM HD422" 
+- PossiblitÃ© de choisir la frÃ©quence audio dans la partie "RÃ©glages audio"
+- Prise en charge des formats infÃ©rieurs au 16/9 pour la case "Ajouter un logo" et "Ajouter des sous-titres"
+- Prise en charge des chemins d'accÃ¨s rÃ©seau sous Windows
+- AmÃ©lioration de l'affichage du Timecode
+- AmÃ©lioration de l'interface
+- AmÃ©lioration diverses
+- Correction bug fonction "Blu-ray"
+- Corrections bugs fonction "XDCAM HD422"
+- Correction bug fonction "Normalisation audio"
+- Correction bug outil "CrÃ©er une archive ZIP"
+- Correction bug file d'attente de rendu et multi-destinations
+- Correction bug file d'attente de rendu et rognage d'image
+- Correction bug case "Afficher un timecode" avec les diffÃ©rentes cadences d'images, merci Ã  Bertrand de Saint Seine
+- Corrections diverses
+- Changement du server d'envoi de mail
+- Mise Ã  jour des drivers -&gt; Meilleur control du dÃ©bit pour la fonction "Apple ProRes"
+          </description>
+        </release><release version="12.1" date="2018-09-02">
+          <description>
+             - ImplÃ©mentation de EXIFTOOL -&gt; Ajout de la partie "Filtre" pour la fonction "Image"
+- Suppression de la fonction "RAW vers JPEG" -&gt; Conversion de fichiers RAW possible directement depuis la fonction image
+- Ajout de la partie "RÃ©glages audio" pour la fonction "Normalisation audio"
+- Ajout de la case "MÃ©lange d'images" dans la partie "SÃ©quence d'images"
+- Ajout de la case "Ajouter du flou de mouvement" dans la partie "SÃ©quence d'images"
+- Ajout de la partie "Affichage" pour la fonction "Image"
+- Ajout des fonctions "AC3" et "OGG"
+- AmÃ©lioration du processus d'analyse de fichier
+- AmÃ©lioration de la fonction "Image" rognage automatique Ã  la rÃ©solution choisie
+- AmÃ©lioration de la fonction "Image" possibilitÃ© de dÃ©finir la rÃ©solution aprÃ¨s la case "Rogner l'image"
+- AmÃ©lioration de l'outil "Renommer de(s) fichier(s)" affichage du fichier actuellement renommÃ©
+- PossibilitÃ© d'utiliser la case "Activer la sÃ©quence d'images Ã  :" pour les icones bleus de prÃ©visualisation
+- PossibilitÃ© d'adapter automatiquement la rÃ©solution avec des bandes noires pour les codecs de sortie
+- Chapitrage automatique toutes les 5 minutes pour la fonction "DVD" merci Ã  Roee Bezalel
+- Correction bug fonction "DÃ©tection de coupe" et bouton "Annuler" merci Ã  Vivien Heraut
+- Correction bug fonction "Normalisation audio"
+- Corrections diverses
+- La partie "Timecode" devient "Affichage"
+          </description>
+        </release><release version="12.0" date="2018-08-01">
+          <description>
+             - Reprogrammation complÃ¨te de l'algorithme de la fonction "Inserts vidÃ©o" plus rapide et plus fiable
+- Ajout de la case "Supprimer les caractÃ¨res spÃ©ciaux" avec l'outil "Renommer le(s) fichier(s)"
+- Ajout de la partie "RÃ©glages audio" pour la fonction "RÃ©encapsulage" et "Remplacer l'audio"
+- PossibilitÃ© d'ajouter le chemin du dossier dans l'adresse ftp avec l'outil "Envoi sur serveur FTP"
+- PossibilitÃ© de choisir le codec audio "AC3" avec les fonctions "H.264" et "H.265"
+- PossibilitÃ© de dÃ©finir plusieurs destinations
+- AmÃ©lioration de la fonction "Sous-Titrage"
+- AmÃ©lioration de l'outil "Scan dossier"
+- AmÃ©lioration de l'affichage des erreurs
+- Correction bug fonction "Sous-Titrage"
+- Correction bug outil "Copier une arborescence"
+- Correction bug fonction "Normalisation Audio"
+- Correction bug "Mes Fonctions..." et fichiers ".enc"
+- Correction bug outil "Eteindre aprÃ¨s l'encodage" sur Mac OSX
+- Correction bug bouton "Mettre en pause" et case "Calculs pendant l'inactivitÃ©" sur Windows
+- Corrections et amÃ©liorations diverses
+- Mise Ã  jour des drivers
+          </description>
+        </release><release version="11.9" date="2018-06-04">
+          <description>
+             - Shutter encoder devient uniquement compatible 64Bits
+- Ajout de l'accÃ©lÃ©ration graphique pour les cartes AMD compatibles
+- Ajout de l'accÃ©lÃ©ration graphique pour Mac OSX
+- Ajout de la fonction "RÃ©encapsulage"
+- Ajout de l'extension ".dpx" pour la fonction "Image"
+- Ajout de la partie SÃ©quence d'images pour les codecs de sortie
+- Ajout de la case "Convertir de : 'fps' Ã  : 'fps'" dans la partie RÃ©glages audio pour le WAV et l'AIFF
+- PossibilitÃ© d'Ã©teindre l'ordinateur automatiquement aprÃ¨s un encodage (clic-droit partie progression)
+- Renommage de la case "Rogner 4K en :" Ã  "Rogner 4K en UHD"
+- Ajout de bulles d'aide pour les cases "Forcer la rÃ©solution en :" et "Rogner 4K en UHD"
+- Modification du codec vidÃ©o WMV en WMV8
+- AmÃ©lioration de l'utilisation de l'outil "Scan dossier"
+- AmÃ©lioration de la fenÃªtre "File d'attente de rendu" double-clic pour le plein Ã©cran
+- AmÃ©lioration de la case "Activer la sÃ©quence d'images Ã  :" durÃ©e dÃ©finie sur le nombre de fichiers
+- Correction bug File d'attente de rendu avec la case "Activer la sÃ©quence d'images Ã  :"
+- Correction bug fonction "DÃ©tection de coupe" avec l'export
+- Correction bug accÃ©lÃ©ration matÃ©rielle cartes Nvidia
+- Correction bug case "Appliquer une LUT :"
+- Correction bug email encodage terminÃ©
+- Correction bug fonction Blu-ray
+- Correction bug case visualiser
+- Corrections diverses
+- Mise Ã  jour des drivers
+          </description>
+        </release><release version="11.8" date="2018-01-25">
+          <description>
+             - Ajout de la partie "Corrections" et "FonctionnalitÃ©s avancÃ©es" pour la fonction "XDCAM HD422"
+- AmÃ©lioration de la fonction "Remplacer l'audio"
+- AmÃ©lioration de la fonction "Apple ProRes" merci Ã  Florian Diego
+- Corrections diverses
+- Mise Ã  jour des drivers
+- Mise Ã  jour de l'aide
+          </description>
+        </release><release version="11.7" date="2017-09-21">
+          <description>
+             - Ajout de la partie "Timecode" pour la fonction "XDCAM HD422"
+- Ajout de la partie "Corrections" dans les paramÃ¨tres de fonctions
+- Ajout de la case "Lissage d'exposition" dans la partie "Corrections"
+- Ajout de la case "Rotation" et "Miroir" pour la partie "SÃ©quence d'images"
+- Ajout de la case "Identifiant" et "Mot de passe" pour la fonction "VidÃ©o web"
+- AmÃ©lioration de la dÃ©tection de l'entrelacement
+- AmÃ©lioration de la case "Stabilisation du plan" compatible tout codec vidÃ©o
+- AmÃ©lioration de la fonction "VidÃ©o web" plus rapide
+- Correction bug fonction "VidÃ©o web" sous windows
+- Correction bug outil "Structure du GOP" sur mac
+- Corrections diverses
+- Mise Ã  jour des drivers
+          </description>
+        </release><release version="11.6" date="2017-08-22">
+          <description>
+             - Ajout de la case "Rogner l'image" dans la partie "SÃ©quence d'images"
+- Ajout de la case "Forcer le profile en :" pour la fonction "H.264"
+- Ajout de la case "Mot de passe" pour la fonction "VidÃ©o web"
+- Ajout de la case "Forcer l'entrelacement" pour "Visualiser sur BlackMagic"
+- Ajout des cadences 23,976, 29,97 et 59,94 pour la case "Conformer la cadence d'images Ã "
+- Ajout de la partie "Timecode" pour la fonction "Coupe sans compression"
+- AmÃ©lioration du renommage de fichier avec la "File d'attente de rendu"
+- AmÃ©lioration d'incrÃ©mentation avec la case "GÃ©nÃ©rer des fichiers au format OP-Atom"
+- Lecture automatique des fichiers pour "Visualiser sur BlackMagic"
+- Correction bug de l'outil "Scan dossier" avec les codecs de montage
+- Correction bug barre de progression avec la fonction "Inserts vidÃ©o"
+- Correction bug de dÃ©tection de carte decklink
+- Correction bug de lancement sous windows
+- Corrections diverses
+- Mise Ã  jour des drivers
+- Mise Ã  jour de l'aide
+          </description>
+        </release><release version="11.5" date="2017-07-26">
+          <description>
+             - Disponible en Anglais / English version available
+- Compatible Ã©crans High-DPI
+- Ajout de la partie "ColorimÃ©trie" pour les codecs de montage
+- Ajout de la case "Ajouter des sous-titres" dans les fonctionnalitÃ©s avancÃ©es
+- Ajout de la case "Afficher le nom de la vidÃ©o" dans la partie "Timecode"
+- Ajout de la fonction "MJPEG"
+- Ajout de la fonction "Xvid"
+- Ajout des cases "Convertir en majuscules" et "Convertir en minuscules" pour l'outil de renommage
+- Correction drivers cartes Decklink
+- Mise Ã  jour des drivers
+- Mise Ã  jour de l'aide
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="11.4" date="2017-06-04">
+          <description>
+             - Ajout de la "NumÃ©risation" depuis une carte BlackMagic, accessible via un clic-droit sur la liste de fichiers vide
+- Ajout des cases "Rotation" et "Miroir" pour la fonction "Image"
+- Ajout de la case "SÃ©parer les pistes audio en :" avec les fonctions "WAV" et "AIFF"
+- Ajout du bouton "FAQ/Astuces" accessible via le bouton d'aide "?"
+- Invertion de trames automatique pour les fonctions "Apple ProRes" et "QT Animation"
+- Modification de la case "Forcer en 25 i/s" qui devient "Conformer la cadence d'images Ã  :"
+- PossibilitÃ© de "Conformer la cadence d'image" par suppression ou par mÃ©lange d'images
+- PossibilitÃ© de "Forcer l'entrelacement pour les fonctions "H.264", "H.265", "Apple ProRes" et "QT Animation"
+- PossibilitÃ© de "Forcer en progressif" pour les fonctions "Apple ProRes" et "QT Animation"
+- PossibilitÃ© d' "Ajouter une piste audio muette" avec la fonction "Remplacer l'audio" via un clic-droit sur la liste
+- Correction bug avec la case "Activer la sÃ©quence d'images Ã  :"
+- Correction bug avec les cases "DÃ©tails :" et "Suppression du bruit :" pour les codecs de sortie
+- Mise Ã  jour des bulles d'aides pour les fonctions avancÃ©es
+- Mise Ã  jour de l'aide
+- Mise Ã  jour des drivers
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="11.3" date="2017-04-30">
+          <description>
+             - Ajout du DNxHR HQX et 444
+- Ajout de l'accÃ©lÃ©ration matÃ©rielle pour la fonction H.264 et H.265 sous Windows
+- Ajout de la case "Ralenti par interpolation d'images" dans les fonctions avancÃ©es pour les codecs de montage
+- AutodÃ©tection du format pour "Visualiser sur BlackMagic"
+- Analyse en stÃ©rÃ©o des fichiers multipistes avec les fonctions "Loudness &amp; True Peak" et "Normalisation Audio"
+- Invertion de trames automatique pour les fonctions "DNxHD" et "DNxHR"
+- Entrelacement du 50p en 50i avec la case "Forcer l'entrelacement" dans les fonctions avancÃ©es
+- Affichage de la progression pour les images avec les codecs de montage
+- PossiblitÃ© de rogner au format 4/3 avec la case "Rognage..."
+- PossiblitÃ© de dÃ©sactiver le son de fin via un clic-droit sur la progression
+- PossibiltÃ© d'ajouter plusieurs sources audio pour la fonction "Remplacer l'audio"
+- Conversion automatique du format 1440x1080 en 1920x1080 pour la fonction "DNxHD"
+- Correction bug d'incrÃ©mentation case "GÃ©nÃ©rer des fichiers au format OP-Atom"
+- Correction bug d'analyse vidÃ©o DMC-GH5
+- Correction bug de dÃ©tection des canaux audio
+- Correction bug fichier son et lecteur vidÃ©o
+- Correction bug case "Source au format OP-Atom"
+- Correction bug "Type :" avec la fonction "DNxHD" 
+- Correction bug extension et outil scan dossier
+- AmÃ©liorations diverses
+- Mise Ã  jour des drivers
+- Mise Ã  jour de l'aide
+          </description>
+        </release><release version="11.2" date="2017-03-13">
+          <description>
+             - Ajout de la fonction "DNxHR"
+- Ajout de la fonction "Blu-ray"
+- Ajout de la fonction "AIFF"
+- Ajout de la fonction "XDCAM HD422"
+- Ajout de la fonction "OGV"
+- Ajout de la visualisation avec la fonction "QT Animation"
+- Ajout de la case "Ajouter un logo" pour les fonctions "H.264", "H.265", "WMV" et "WebM"
+- Ajout du choix de la quantisation pour la fonction "WAV"
+- Fonction "DVD" 2 passages automatique (pour un dÃ©bit &lt; ou = Ã  6000k)
+- Fonction "DVD" dÃ©bit automatique pour un DVD de 4.7Go
+- PossibilitÃ© de crÃ©er un sÃ©quence d'image Ã  partir d'une vidÃ©o avec la fonction "Image"
+- PossibilitÃ© de mixer plusieurs fichiers audio avec les fonctions "WAV" et "AIFF"
+- PossibilitÃ© de visualiser plusieurs vidÃ©os en mÃªme temps
+- Modification de l'option de remplacement du fichier, "Non" incrÃ©mente, "Annuler" passe au fichier suivant
+- Modification du bouton "capture d'image" de sortie sur le lecteur par "PrÃ©visualisation"
+- IncrÃ©mentation du dossier automatique avec la case GÃ©nÃ©rer des fichiers au format OP-Atom
+- AmÃ©lioration de la qualitÃ© de la fonction du DVD
+- AmÃ©lioration du temps restant pour la fonction "Inserts vidÃ©o"
+- AmÃ©lioration de la prÃ©cision du lecteur vidÃ©o et des boutons de capture d'image
+- AmÃ©liorations des fonctions "Bout Ã  Bout" et "Inserts vidÃ©o"
+- AmÃ©lioration File d'attente de rendu redimensionnable
+- AmÃ©lioration du codec H.264 (tune film)
+- AmÃ©liorations diverses
+- Meilleure compression pour la fonction "Image"
+- Double-clic sur un fichier lance la lecture
+- Mise Ã  jour de l'aide
+- Correction bug fichier qui ne se supprime pas avec la visualisation d'encodage
+- Correction de bugs avec la fonction "Normalisation Audio"
+- Correction de bugs avec la fonction "DÃ©tection de coupe"
+- Correction bug fonction "Normalisation audio" et codec aac
+- Correction bug stabilisation et fonction "DNxHD"
+- Correction bug lecteur vidÃ©o et durÃ©e totale
+- Correction de bugs File d'attente de rendu
+- Correction bug case Visualiser
+- Correction bugs divers
+- Remise en forme du code
+          </description>
+        </release><release version="11.1" date="2017-02-19">
+          <description>
+             - Ajout de la case "Visualiser" sur la progression
+- case "Visualiser" compatible avec les fonctions "DNxHD", "Apple ProRes" et "DV PAL"
+- Visualisation des fichiers pendant l'encodage plus rapide et de meilleur qualitÃ©
+- PossibilitÃ© de Visualiser sur plusieurs instances de Shutter Encoder
+- Visualiser plus fiable plus performant
+- Ajout de la case "Suppression du bruit" pour les codecs de sortie
+- IncrÃ©mentation des fichiers pour la liste d'attente de rendu
+- La fonction "Normalisation Audio" est compatible avec l'H.264
+- AmÃ©lioration multi-selection des fichiers par appui long
+- AmÃ©lioration bouton "Capture d'image" depuis le lecteur vidÃ©o
+- Mise Ã  jour du driver youtube-dl
+- Correction dÃ©tection de niveau de noir avec le codec Apple ProRes
+- Correction nombreux bugs H.264, H.265, WMV, WebM, DVD
+- Correction bug file d'attente avec la case "Visualiser"
+- Correction bug fonction "Mes fonctions..."
+- Corrections bugs divers
+- AmÃ©liorations diverses
+          </description>
+        </release><release version="11.0" date="2017-02-13">
+          <description>
+             - Ajout de la fonction "Inserts vidÃ©o"
+- Ajout de la visualisation de fichier vidÃ©o sur carte BlackMagic via un clic-droit sur la liste de fichiers
+- Le bouton "Visualiser" accessible via un clic-droit sur la liste affiche la vidÃ©o avec ses canaux audio sous forme de vu-mÃ¨tre
+- Ajout de l'option "SÃ©quence d'images" pour les codecs de montage 
+- Reprogrammation complÃ¨te de la fonction "DVD RIP"
+- Lecture cÃ´te Ã  cÃ´te des options avancÃ©es pour le dÃ©tails et suppression du bruit
+- Le format 4/3 est conservÃ© pour la fonction DNxHD
+- Freeze frame d'une image automatique de 10 secondes avec les codecs de montage
+- Ajout du calcul du poids approximatif du DNxHD et Apple ProRes, accessible via un clic-droit sur la liste
+- PossiblitÃ© de prÃ©visualiser la compression avec les fonctions H.264, H.265, WebM et WMV
+- PossibilitÃ© d'afficher la compression en cours pour les fonctions H.264, H.265, WebM et WMV via un clic-droit sur la progression
+- IncrÃ©mentation automatique du nom des fichiers pour la fonction "Coupe sans compression" et "Image"
+- PossibilitÃ© d'afficher le timecode interne de la vidÃ©o avec l'outil de changement de point d'entrÃ©e et de sortie
+- AmÃ©lioration de la prÃ©cision du temps restant
+- AmÃ©lioration de l'outil "Rognage vidÃ©o"
+- AmÃ©lioration de la recherche dans la liste de fonctions
+- Affichage de la progression pour les fonctions "Bout Ã  Bout" et "DVD RIP"
+- Affichage du temps restant fonction "Bout Ã  Bout"
+- AmÃ©lioration de la console
+- Ajout du dÃ©bit 64kbits/s pour l'audio
+- La touche d'aide "?" devient bleu
+- Mise Ã  jour des drivers
+- Mise Ã  jour de l'aide
+- Optimisation diverses
+- AmÃ©liorations diverses
+- Correction bug "Voulez-vous remplacer le fichier ?"
+- Corrections bugs divers
+          </description>
+        </release><release version="10.9" date="2017-01-24">
+          <description>
+             - Ajout de la fonction "WMV"
+- Ajout de la fonction "WebM"
+- Ajout de la fonction "DÃ©tection de noir"
+- Ajout de l'option "Copier une arborescence" accessible via un clic-droit sur la liste de fichiers
+- Ajout de l'option "Renommer le(s) fichier(s)" accessible via un clic-droit sur la liste de fichiers
+- Ajout de la case "Rogner 4K en :"
+- Ajout de la case "Stabilisation du plan" pour les codecs de montage
+- Ajout de la case "DÃ©tails :"
+- Ajout de la case "Suppression du bruit :"
+- Ajout du Short-term Max et Momentary Max avec leurs TC pour la fonction "Loudness &amp; True Peak" ainsi que toutes les valeurs de Short-term au dessus de -16 LUFS
+- Ajout des extension ".flv", ".f4v", ".mpg", ".ts" et ".m2ts" pour les fonctions "H.264" et "H.265"
+- Reprogrammation complÃ¨te de la case "Rogner l'image..." pour la fonction "Image"
+- Affichage de l'image du point d'entrÃ©e avec la case "Rogner l'image..." pour la fonction "Image"
+- Ajout des extension ".png", ".tif", ".tga" et ".bmp" pour la fonction "Image"
+- Modification de la fenÃªtre accessible via le bouton "?" -&gt; Aides sur le fonctionnement des fonctions
+- Modification du type de lancement de l'application sur Mac
+- AmÃ©lioration des Ã©crans de visualisation
+- Mise en stÃ©rÃ©o des flux audio mono pour les fonctions "MP3" et "WAV"
+- PossiblitÃ© d'accÃ¨der au clic-droit pendant un rendu
+- PossibilitÃ© d'Ã©diter les commandes de la file d'attente
+- Le groupe "H.264/H.265 ParamÃ¨tres" devient "RÃ©glage des dÃ©bits"
+- Correction bug DVD et Timecode
+- Correction bug DVD et case "Forcer en progressif"
+- Correction bug fonction "Bout Ã  Bout" Mac
+- Correction bug case audio image par image
+- Correction bug "Convertir en :" avec les fonctions "H.264" et "H.265"
+- Correction bugs divers
+- AmÃ©lioration diverses
+          </description>
+        </release><release version="10.8" date="2016-12-30">
+          <description>
+             - ImplÃ©mentation de BMXTRANSWRAP -&gt; Ajout de la case "GÃ©nÃ©rer des fichiers au format OP-Atom" pour la fonction DNxHD (Permet l'utilisation native sur Avid sans import)
+- Ajout de la liste d'attente de rendu accessible via le bouton "&lt;" 
+- Ajout des options avancÃ©es pour la fonction "DVD"
+- Mise en stÃ©rÃ©o des flux audio mono pour les fonctions "DVD", "H.264" et "H.265" 
+- Mise Ã  jour du logiciel youtube-dl
+- AmÃ©lioration de la fonction "DVD"
+- AmÃ©lioration de "Mes fonctions..."
+- AmÃ©lioration du lecteur vidÃ©o
+- AmÃ©lioration du nombre de processeurs utilisÃ©s pour chaque fonction
+- AutodÃ©tection et conservation du 24bit pour l'audio
+- Conservation de tous les canaux audio pour la fonction "Coupe sans compression"
+- Conservation de l'extension source pour la fonction "Coupe sans compression"
+- Le bouton "DurÃ©e totale des fichiers" devient prÃ©cis Ã  l'image
+- Correction bug avec la fonction "Image" et les boutons "Capture d'image" sur le lecteur vidÃ©o
+- Correction bug d'affichage du logiciel sur Ã©cran High-DPI pour windows
+- Correction bug case "Afficher le timecode" avec la fonction "DVD"
+- Correction bug fonction "Bout Ã  bout" et fichiers sons
+- Correction bug de crÃ©ation avec la fonction "DVD"
+- Correction bug case calculs pendant l'inactivitÃ©
+- Correction bug case "Rognage..."
+- Correction bug demande de Java 7
+- Correction bug H265
+- Corrections bugs fenÃªtre rÃ©duite
+- Corrections bugs et amÃ©liorations diverses
+          </description>
+        </release><release version="10.7" date="2016-11-23">
+          <description>
+             - AmÃ©lioration de l'interface du logiciel
+- AmÃ©lioration de la prÃ©cision du calcul pour le bouton "DurÃ©e totale des fichiers"
+- AmÃ©lioration de la prÃ©cision du Lecteur vidÃ©o
+- Ajout de la fonction "DÃ©tection de coupe"
+- Ajout du bouton de rÃ©duction pour la fenÃªtre "Informations"
+- Ajout d'informations pour les cases "Forcer en 25 i/s" et "Convertir en :"
+- Shutter Encoder se rÃ©duit sur la fenÃªtre oÃ¹ il se situe
+- La case "LossLess" des paramÃ¨tres H.264/H.265 devient "QualitÃ© Max."
+- Les fonctions "Remplacer l'audio", "H.264", "DV PAL", "Bout Ã  Bout" et "AAC" deviennent compatibles multipistes audio
+- La case "RAW" est renommÃ©e "QT Anim" dans les paramÃ¨tres de la fonction "Timelapse"
+- Correction bug et amÃ©lioration de la fenÃªtre de mise Ã  jour
+- Correction bug de format pour la case "Rogner l'image..."
+- Corrections bugs et amÃ©liorations diverses
+          </description>
+        </release><release version="10.6" date="2016-10-25">
+          <description>
+             - Shutter Encoder ne requiert plus Java, il est contenu dans le logiciel
+- Deux versions diffÃ©rentes pour windows (64 et 32bits)
+- Les drivers sont contenus dans le logiciel
+- FFMPEG mis Ã  jour
+- Ajout de la case "Source au format OP-Atom" dans les fonctions avancÃ©es permettant de rÃ©cupÃ©rer les fichiers audios sÃ©parÃ©s de la vidÃ©o
+- Reprogrammation complÃ¨te de l'outil "Rogner l'image..."
+- DÃ©tection automatique du fichier audio et vidÃ©o avec la fonction "Remplacer l'audio"
+- AmÃ©lioration de l'Ã©criture dans les cases de Shutter, plus besoin d'effacer avant d'Ã©crire
+- AmÃ©lioration des performances du lecteur vidÃ©o avec le point de sortie
+- Utilisation du curseur possible avec un fichier audio dans le lecteur vidÃ©o
+- Le point d'interrogation situÃ© en haut Ã  droite ouvre la fenÃªtre d'astuces
+- Affichage du titre du tÃ©lÃ©chargement pour la fonction "VidÃ©o web"
+- Format audio pour les codecs de montage sont obligatoirement convertis en PCM
+- Suppression de la case "Convertir l'audio en PCM"
+- L'encodage ne se lance pas lorsque le fichier de sortie est Ã©gale Ã  celui de la source
+- Correction bug Fonction "Bout Ã  Bout"
+- Correction bug fenÃªtre "Mes fonctions..."
+- Correction diffÃ©rents bugs fonction "DNxHD"
+- Correction problÃ¨me de mise Ã  jour avec Windows
+- Correction bug de rÃ©duction avec le lecteur vidÃ©o
+- Correction et amÃ©lioration de la dÃ©tection des erreurs
+- Correction bug lors d'un envoi d'e-mail aprÃ¨s encodage
+- Correction bug de tÃ©lÃ©chargement pour la fonction "VidÃ©o web"
+- Correction bug avec la fonction "Normalisation Audio" sur Mac
+- Correction bug bouton "Capture d'image" dans le lecteur vidÃ©o
+- Correction d'affichage de la barre de dÃ©roulement pour la console
+- Correction bug d'affichage du temps dans les paramÃ¨tres H.264/H.265
+- Correction bug codecs de montage lorsque le fichier ne contient pas de son
+- Correction d'affichage du lecteur vidÃ©o avec les formats supÃ©rieurs Ã  1.77
+- Correction bugs divers
+          </description>
+        </release><release version="10.5" date="2016-09-07">
+          <description>
+             - Ajout de la fonction "Sous-Titrage"
+- Ajout du ctrl + clic sur Mac
+- Lecteur vidÃ©o compatible El Capitan et supÃ©rieur
+- Lecteur vidÃ©o adaptÃ© au ratio d'image
+- ContrÃ´le du volume du Lecteur vidÃ©o avec + et -
+- Ajout de la visualisation par waveform pour les fichiers audios dans le Lecteur vidÃ©o
+- Ajout de la case "Activer l'audio image par image" pour le lecteur vidÃ©o
+- Suppression du bouton "OK" pour les paramÃ¨tres H.264
+- AccÃ¨s au changelog en cliquant sur le numÃ©ro de version
+- "DÃ©marrer l'encodage" devient "DÃ©marrer la fonction"
+- Correction bug bouton "DurÃ©e totale des fichiers"
+- Correction bug point d'entrÃ©e et sortie dÃ©cochÃ©e
+- Correction bug saisie manuelle du point d'entrÃ©e et de sortie
+- Correction bug affichage du Timecode avec un point d'entrÃ©e et de sortie
+- Correction bug case "Forcer la sortie en : 0-255"
+- Correction bugs divers
+          </description>
+        </release><release version="10.4" date="2016-08-05">
+          <description>
+             - Ajout du codec Apple ProRes LT
+- Ajout du bouton "DurÃ©e totale des fichiers" accessible via un clic droit sur la liste
+- Ajout de la fonction "Mes fonctions..."
+- Canaux audio conservÃ©s pour les codecs de montage -&gt; ajout de la case "Convertir l'audio en PCM" dans les fonctions avancÃ©es
+- Position de la fenÃªtre rÃ©duite conservÃ©e
+- Correction bug d'encodage avec la liste des codecs
+- Correction bugs divers
+          </description>
+        </release><release version="10.3" date="2016-08-02">
+          <description>
+             - Liste complÃ¨te des sites disponibles pour la fonction "VidÃ©o Web" accessible via le bouton "?"
+- Correction bug bouton "Visualiser" sur Mac
+- Correction bug d'affichage des fonctions avancÃ©es 
+- Correction bug avec le bouton "DÃ©compresser l'archive"
+- Correction bug avec la case "Forcer le dÃ©sentrelacement"
+- Correction bug H.264
+- Correction bug d'affichage de la durÃ©e pour les paramÃ¨tres H.264/H.265
+          </description>
+        </release><release version="10.2" date="2016-07-10">
+          <description>
+             - Ajout de la fenÃªtre d'astuces au dÃ©marrage
+- AmÃ©lioration des fonctions avancÃ©es
+- Ajout de la case "Forcer la rÃ©solution en : " dans la partie "Fonctions avancÃ©es"
+- PossiblitÃ© d'afficher le type de GOP via un clic droit sur un fichier vidÃ©o dans la liste
+- Mise Ã  jour automatique de la durÃ©e dans la partie "H.264/h.265 ParamÃ¨tres" avec le changement de point d'entrÃ©e et de sortie
+- Correction bug de tÃ©lÃ©chargement avec la fonction "VidÃ©o web" -&gt; TÃ©lÃ©chargement des drivers (automatique)
+- Correction bug "Calculs pendant l'inactivitÃ©"
+          </description>
+        </release><release version="10.1" date="2016-06-27">
+          <description>
+             - Ajout des dÃ©bits pour le DNxHD : 75, 240, 365, 365 X, 80, 115, 175, 175 X
+- Ajout de la sÃ©lection des rÃ©solutions 4096x2160 et 3840x2160
+- Ajout de la possiblitÃ© de modifier le dÃ©bit de la fonction MP3
+- Ajout de la fonction AAC
+- AmÃ©lioration de la prÃ©cision du control des images du lecteur vidÃ©o
+- Correction du problÃ¨me d'affichage du Timecode sous Windows
+- Correction du placement de la fenÃªtre sous Windows
+- Correction bugs fenÃªtre d'information
+- Corrections autres bugs
+          </description>
+        </release><release version="10.0" date="2016-06-09">
+          <description>
+             - Reprogrammation totale de Shutter Encoder, plus rapide et plus intuitif
+- Compatible Mac &amp; PC
+-
+          </description>
+        </release><release version="9.9" date="2016-04-25">
+          <description>
+             - AmÃ©lioration de l'outil rognage vidÃ©o
+- Drivers allÃ©gÃ©s, tÃ©lÃ©chargement plus rapide 
+- Refonte complÃ¨te de la fonction "Loudness &amp; True Peak" plus rapide, plus dÃ©taillÃ©e avec barre de progression
+          </description>
+        </release><release version="9.8" date="2016-01-17">
+          <description>
+             - Ajout de la case "Rogner l'image..." dans les paramÃ¨tres de la fonction "Image"
+- Mise Ã  jour des Astuces au dÃ©marrage du logiciel
+- PossibilitÃ© de choisir la position vidÃ©o dans la fenÃªtre "Rognage VidÃ©o"
+- Correction diverses et amÃ©liorations fenÃªtre "Rognage VidÃ©o" et "Mode Playlist"
+- Correction bug du timecode
+          </description>
+        </release><release version="9.7" date="2016-01-08">
+          <description>
+             - Ajout d'une fenÃªtre rÃ©sumant la progression situÃ© en bas Ã  droite lorsque le logiciel est rÃ©duit
+- La case "Format 2.39" dans les paramÃ¨tres de la fonction h.264 devient "Rognage" pour dÃ©finir son propre format
+- Ajout de la fonction "Scan dossier" accessible via un clic-droit sur la liste vide, permettant un scan en continu d'un dossier pour effectuer les encodages
+- Correction de quelques bugs
+          </description>
+        </release><release version="9.6" date="2016-01-03">
+          <description>
+             - Mise Ã  jour des drivers internes dÃ» au changement d'annÃ©e
+- Correction bugs du "Mode Playlist"
+- Ajout d'une barre de lecture en "Mode Playlist"
+- Ajout des raccourcis en "Mode Playlist" (touches : espace, entrÃ©e, + et -)
+          </description>
+        </release><release version="9.5" date="2015-12-30">
+          <description>
+             - Refonte complÃ¨te de l'interface
+- Ajout du paramÃ¨tre "Fonctions avancÃ©es"
+- PossibilitÃ© d'agrandir la fenÃªtre du lecteur vidÃ©o
+- PossibilitÃ© d'agrandir la fenÃªtre d'informations
+- Optimisation de la fenÃªtre d'informations
+- Ajout de la dÃ©tection des niveaux de luminance dans la fenÃªtre "informations"
+- Ajout de "Structure du GOP" accessible sur un seul fichier de la liste
+- Auto-dÃ©tection du niveau de luminance pour les fonctions H.264 et H.265
+- Correction de l'affichage du 2nd Visualiseur dans le lecteur vidÃ©o
+- Calcul du dÃ©bit en fonction de la taille directement affichÃ© pour la fonction H.264
+- Suppression des fonctions H.264 prÃ©dÃ©finis
+- Ajout de l'affichage de bulles d'aides
+- Drivers mis Ã  jour
+- Mise Ã  jour automatique des drivers 
+- Corrections et amÃ©liorations diverses
+          </description>
+        </release><release version="9.4" date="2015-06-12">
+          <description>
+             - FenÃªtre "Astuces" au dÃ©marrage du logiciel avec tÃ©lÃ©chargement automatique des nouvelles astuces
+- Ajout de la case "Conversion cadence" qui permet de modifier votre cadence d'image (ex : 24-&gt;25)
+- Refonte complÃ¨te de la fonction "DÃ©tection de scÃ¨nes" possibilitÃ© d'enregistrer sous le format EDL
+- Corrections diverses
+          </description>
+        </release><release version="9.3" date="2015-05-31">
+          <description>
+             - Shutter Encoder devient compatible 32bits
+- Mise Ã  jour du logiciel interne FFMPEG
+- Ajout de la fonction "DNxHD 185"
+- Ajout de "Email encodage terminÃ©" accessible via un clic droit sur la destination
+- Changement de la case "IntÃ©grer" dans la partie Timecode par "Afficher le timecode interne de la vidÃ©o" (uniquement 25i/s)
+- Point d'entrÃ©e et de sortie fortement optimisÃ©
+- PossibilitÃ© de faire une capture d'image sur le lecteur vidÃ©o
+- PossibilitÃ© de de dupliquer le lecteur sur un 2nd Visualiseur
+- PossibilitÃ© de crÃ©er un fichier proxy lorsque le fichier n'est pas lisible directement
+- PossibilitÃ© d'ouvrir le dossier du fichier sÃ©lectionnÃ© dans la liste avec un clic droit
+- Correction erreur "Calcul et dÃ©bit" en mode "Manuel" dans "point d'entrÃ©e et de sortie"
+- Correction erreur fonctions "DNxHD .." avec les rÃ©solutions infÃ©rieures Ã  1920x1080 et l'Ã©chantillonnage
+- Fonction "Storyboard" renommÃ© en "DÃ©tection de scÃ¨nes"
+- Suppression de la fonction "Waveform vidÃ©o"
+- Suppression de la fonction "Histogramme vidÃ©o"
+          </description>
+        </release><release version="9.2" date="2015-02-12">
+          <description>
+             - Suppression de la fonction "AC3 vers PCM"
+- DÃ©sentrelacement automatique pour la fonction "QT Animation"
+- AmÃ©lioration de la fonction "Bout Ã  Bout" et correction de bugs
+- Ajout de la fonction "Coupe sans compression"
+- Correction bug en mode "Auto" avec la fonction Timelapse
+- Correction d'affichage du tÃ©lÃ©chargement des drivers
+- Shutter Encoder uniquement en version 64bits
+- Corrections diverses
+          </description>
+        </release><release version="9.1" date="2015-01-12">
+          <description>
+             - TÃ©lÃ©chargement simplifiÃ© et plus rapide des drivers
+- Plus de demande de don PayPal lors de la fermeture du logiciel
+- SÃ©paration entre les fonctions H.264 et H.265
+- Filtrage des fichiers possible Ã  n'importe quel moment avec la liste dÃ©roulante "Filtre :"
+- Corrections lÃ©gers bugs
+          </description>
+        </release><release version="9.0" date="2014-11-12">
+          <description>
+             - AmÃ©lioration de la qualitÃ© vidÃ©o du H.264
+- AmÃ©lioration de la qualitÃ© audio du H.264 ainsi que sa compatibilitÃ©
+- Ajout de la fonction "H.265 paramÃ©trable"
+- Ajout de la fonction "Waveform vidÃ©o"
+- Ajout de la fonction "Histogramme vidÃ©o"
+- PossibilitÃ© de sauvegarder une fonction avec ses paramÃ¨tres via Ctrl + S (crÃ©ation de fichier au format ".enc")
+- PossibilitÃ© de dÃ©sactiver le son avec la fonction "H.264 paramÃ©trable" avec la valeur "0" dans la case "DÃ©bit audio"
+- Commande directe en inscrivant "ffplay" suivi de vos lignes de commandes, utilisant les fichiers de la liste et la partie extension
+- Affichage des erreurs lorsqu'il est impossible de lire un fichier en visualisation
+          </description>
+        </release><release version="8.9" date="2014-11-02">
+          <description>
+             - AmÃ©lioration de la qualitÃ© des images Jpeg avec la fonction "Image"
+- Choix du nom du fichier Bout Ã  Bout
+- Ajout de la fonction "QT Animation"
+- Correction pour le Remplacement du fichier existant
+- PossibilitÃ© de choisir le NÂ° de titre pour la fonction "DVD RIP"
+- Logiciel AllÃ©gÃ©
+- Correction ProblÃ¨me de visualisation avec "Ouvrir dans Shutter Encoder"
+- Correction Bug incrÃ©mentation des fichiers terminÃ©s
+          </description>
+        </release><release version="8.8" date="2014-10-07">
+          <description>
+             - Mode Playlist disponible via un clic droit sur la liste des fichiers
+- Affichage d'erreur de tÃ©lÃ©chargement avec la fonction "Web vidÃ©o"
+- Correction bug "2 passages" avec windows 7 et 8
+- Ajout du bouton "Visualiser" via un clic droit sur le(s) fichier(s) sÃ©lectionnÃ©(s)
+- Visualisation d'un fichier par double clic possible
+- Ajout de la fonction "Normalisation Audio"
+- Ajout de la fonction "Bout Ã  Bout"
+- Corrections diverses
+          </description>
+        </release><release version="8.7" date="2014-06-14">
+          <description>
+             - Plus de problÃ¨me d'administrateur pour l'installation des drivers
+- Ajout du lancement de Shutter Encoder au menu contextuel avec la possibilitÃ© d'ouvrir directement un dossier ou fichier
+- Mise en pause de l'opÃ©ration lors d'un clic sur le bouton "Annuler"
+- Changement du codec de la case "RAW" pour la fonction "Timelapse" en Quicktime Animation
+- AccÃ¨s au paramÃ¨tre "RÃ©solution" pour la case "RAW" avec la fonction "Timelapse"
+- La case "Calculs pendant l'inactivitÃ©" est disponible pour toutes les fonctions
+- Corrections diverses
+          </description>
+        </release><release version="8.6" date="2014-05-26">
+          <description>
+             - TÃ©lÃ©chargement uniquement des drivers manquants lors d'une mise Ã  jour
+- Affichage des fichiers non traitÃ©s Ã  la fin de l'opÃ©ration
+- Lorsque le fichier existe dÃ©jÃ  il est maintenant possible de le passer et de continuer l'opÃ©ration en cours ou bien d'annuler toute l'opÃ©ration
+- RÃ©cupÃ©ration du dossier parent lors d'un glissÃ©-dÃ©posÃ© d'un fichier sur la destination
+- DÃ©cochage automatique de la case "Afficher le dossier de sortie" lors du changement de destination
+- Correction bug Ã  partir de 1000 fichiers terminÃ©s
+- Correction bug Ã  l'installation des drivers
+- Correction d'affichage des filtres
+- Corrections diverses
+          </description>
+        </release><release version="8.5" date="2014-05-21">
+          <description>
+             - Ajout du visualiseur de rÃ©solution, accessible Ã  cÃ´tÃ© du choix de la rÃ©solution via un icone bleu
+- Suppression des Ã©lÃ©ments possible avec la touche suppr. ou delete
+- Correction des droits d'administrateurs
+- Corrections diverses
+          </description>
+        </release><release version="8.4" date="2014-05-20">
+          <description>
+             - Corrections de bugs pour l'outil "Calcul du dÃ©bit et de la taille"
+- Corrections de multiples erreurs sur "Point d'entrÃ©e et de sortie"
+- DÃ©sentrelacement automatique pour la fonction "Image"
+          </description>
+        </release><release version="8.3" date="2014-05-05">
+          <description>
+             - Changement du son une fois l'opÃ©ration terminÃ©e
+- RÃ©duction de la fenÃªtre "Point d'entrÃ©e et de sortie" possible
+- Corrrections bugs du lecteur vidÃ©o
+- Changement image par image du lecteur possible avec les flÃ¨ches du clavier
+- Plus aucune attente lors d'un changement de point d'entrÃ©e
+- Lancement du logiciel en mode administrateur, permet d'Ã©viter les erreurs
+          </description>
+        </release><release version="8.2" date="2014-05-05">
+          <description>
+             - Changement du lecteur vidÃ©o, lecteur Quicktime beaucoup plus prÃ©cis et rapide
+- Logiciel AllÃ©gÃ©
+- Ajout de la case "Calculs pendant l'inactivitÃ©" ce qui permet de continuer Ã  travailler pendant l'encodage d'un fichier
+- Ajout pour la fonction "Image" division de la rÃ©solution par 2, 4 ou votre valeur du type "x:1" dans le paramÃ¨tre "Image"
+          </description>
+        </release><release version="8.1" date="2014-04-19">
+          <description>
+             - Correction bug des mises Ã  jour dÃ» Ã  un changement de serveur
+- Correction bug de la fonction "DVD"
+- ajout de la fonction Apple ProRes Proxy
+          </description>
+        </release><release version="8.0" date="2014-03-21">
+          <description>
+             - Ajout de la fonction "StoryBoard"
+- Ajout de la fonction "RAW vers JPEG"
+- IntÃ©gration de 7zip accessible via un clic droit sur le(s) fichier(s) de la liste, permettant de compresser et dÃ©compresser des fichiers
+          </description>
+        </release><release version="7.3" date="2014-01-06">
+          <description>
+             - Correction de rÃ©cupÃ©ration pour la fonction "DVD RIP"
+- Commande direct en inscrivant "ffmpeg" suivi de vos lignes de commandes, utilisant les fichiers de la liste et la partie extension
+- AmÃ©lioration du calcul de la partie "Calcul et dÃ©bit"
+- Ajout du filtre ".mxf" et de l'extension ".mkv"
+- Remplacement de l'option 4:2:2 pour l'option Lossless sur le H.264
+- Ajout de l'intÃ©gration du Timecode avec incrÃ©mentation avec toutes les vidÃ©os de la liste
+- Ajout de "Source" pour le codec "Image vidÃ©o"
+- ParamÃ¨tre "RÃ©solution" pour la fonction QT JPEG et la fonction H.264 (paramÃ©trable)
+- Corrections diverses
+          </description>
+        </release>
   </releases>
 </component>
