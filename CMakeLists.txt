@@ -119,8 +119,8 @@ add_jar(ShutterEncoder
     lib/activation.jar
     lib/commons-io-2.5.jar
     lib/commons-net-3.5.jar
-    lib/flatlaf-3.2.1.jar
-    lib/flatlaf-extras-3.2.1.jar
+    lib/flatlaf-3.3.jar
+    lib/flatlaf-extras-3.3.jar
     lib/javax.mail.jar
     lib/jgoodies-common-1.8.0.jar
     lib/jgoodies-forms-1.8.0.jar
@@ -140,8 +140,8 @@ install_jar(ShutterEncoder /app/bin)
 install(FILES lib/activation.jar
               lib/commons-io-2.5.jar
               lib/commons-net-3.5.jar
-              lib/flatlaf-3.2.1.jar
-              lib/flatlaf-extras-3.2.1.jar
+              lib/flatlaf-3.3.jar
+              lib/flatlaf-extras-3.3.jar
               lib/javax.mail.jar
               lib/jgoodies-common-1.8.0.jar
               lib/jgoodies-forms-1.8.0.jar

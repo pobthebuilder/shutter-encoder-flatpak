@@ -49,7 +49,28 @@
   </provides>
 
   <releases>    
-    <release version="17.8" date="2024-01-11">
+    <release version="17.9" date="2024-02-08">
+          <description>
+             - Added GPU encoding for '.avif' format
+- Added '.j2k' extension for "Image" function
+- Added "FLAC" audio codec for "AV1" function
+- Improved '.avif' encoding speed
+- Ability to use fullscreen mode by double-clicking on the "Video Player"
+- Corrected bug with "Web video" function and non-standard file names.
+- Corrected bug with "Rewrap" function and "Add subtitles" section
+- Corrected bug with "Exclude extensions" checkbox
+- Corrected bug with "Image cropping" section
+- Corrected bug with timecode detection
+- Corrected bug with "DV" input files
+- Renamed "OGV" to "Theora"
+- Renamed "OGG" to "Vorbis"
+- Moved "MPEG-2" &amp; "Theora" functions into "Old codecs"
+- Various corrections
+- Various improvements
+- Updated UI core
+- Updated ffmpeg, ffprobe for Linux
+          </description>
+        </release><release version="17.8" date="2024-01-11">
           <description>
              - Added "Add a suffix" checkbox for outputs section
 - Added "Create a subfolder" checkbox for outputs section
