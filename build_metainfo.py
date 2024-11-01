@@ -12,6 +12,7 @@ from xml.sax.saxutils import escape
 
 
 pattern = re.compile(r'Version (\d+(\.\d+)?)(\s-\s(\d{1,2}\/\d{1,2}\/\d{4}))?(.*?(?=Version))', re.S)
+list_pattern = re.compile(r'\s-\s*(.*)')
 
 ###
 # Find the current tag
@@ -28,14 +29,14 @@ with open("org.paulpacifico.ShutterEncoder.yaml") as stream:
 # Enumerate the ChangeLog
 ###
 response = requests.get('https://www.shutterencoder.com/changelog.txt')
-latest_changes_text = ""
 releases = ""
 
 matches = re.finditer(pattern, response.text)
 for idx, match in enumerate(matches):
     version_text = match.group(1)
     date_text = match.group(4)
-    changes_text = match.group(5).strip()
+    changes_text = match.group(5).strip().replace("\r", "")
+    changes_html = "<ul>\n"
 
     current_version = packaging.version.parse(version_text)
     if current_version > min_version:
@@ -47,14 +48,17 @@ for idx, match in enumerate(matches):
     date = datetime.datetime.strptime(date_text, "%d/%m/%Y")
     date_text = date.strftime("%Y-%m-%d")
 
-    if idx == 0 or latest_changes_text == "":
-        latest_changes = changes_text
+    list_matches = re.finditer(list_pattern, changes_text)
+    for idx, list_match in enumerate(list_matches):
+        if list_match.group(1):
+            li = escape(list_match.group(1))
+            changes_html += "<li>" + li + "</li>\n"
+    changes_html += "</ul>\n" 
 
-    release = """<release version=\"""" + version_text + """\" date=\"""" + date_text + """\">
-          <description>
-             """ + escape(changes_text) + """
-          </description>
-        </release>"""
+    release = """
+          <release version=\"""" + version_text + """\" date=\"""" + date_text + """\">
+            <description>""" + changes_html + """</description>
+          </release>"""
 
     releases += release
 
@@ -63,13 +67,35 @@ template = \
 <component type="desktop-application">
   <id>org.paulpacifico.ShutterEncoder</id>
   <metadata_license>FSFAP</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>GPL-3.0-only</project_license>
   <name>Shutter Encoder</name>
   <summary>A converter designed by video editors</summary>
 
   <description>
     <p>
-      """ + latest_changes_text + """
+List of Functions:
+– Without conversion:
+Cut without re-encoding, Replace audio, Rewrap, Conform, Merge, Extract, Subtitling, Video inserts
+– Sound conversions:
+WAV, AIFF, FLAC, ALAC, MP3, AAC, AC3, OPUS, Vorbis, Dolby Digital Plus, Dolby TrueHD
+– Editing codecs:
+DNxHD, DNxHR, Apple ProRes, QT Animation, GoPro CineForm, Uncompressed
+– Output codecs:
+H.264, H.265, H.266, VP8, VP9, AV1
+– Broadcast codecs:
+XDCAM HD422, AVC-Intra 100, XAVC, HAP 
+– Old codecs:
+Theora, MPEG-2, MJPEG, Xvid, DV PAL, WMV, MPEG-1
+– Archiving codec:
+FFV1
+– Images creation:
+JPEG, Image
+– Burn &amp; Rip:
+DVD, Blu-ray, DVD RIP
+– Analysis:
+Loudness &amp; True Peak, Audio normalization, Cut detection, Black detection, Media offline detection, VMAF
+– Download:
+Web video
     </p>
   </description>
 
