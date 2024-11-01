@@ -19,6 +19,7 @@ finish-args:
   - --filesystem=xdg-cache
   - --filesystem=xdg-data
   - --filesystem=xdg-videos
+  - --filesystem=xdg-pictures
 
 command: /app/bin/ShutterEncoder.sh
 modules:
@@ -56,6 +57,98 @@ modules:
       - type: archive
         url: https://mediaarea.net/download/source/libmediainfo/23.03/libmediainfo_23.03.tar.xz
         sha256: f57afffd76c6f9569ceb1e778fce834508eb0289bdeb62181143804aa3a6c098
+  - name: libass
+    sources:
+      - type: archive
+        url: https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz
+        sha256: "881f2382af48aead75b7a0e02e65d88c5ebd369fe46bc77d9270a94aa8fd38a2"
+  - name: opencore-amr
+    sources:
+      - type: archive
+        url: https://downloads.sourceforge.net/project/opencore-amr/opencore-amr/opencore-amr-0.1.6.tar.gz
+        sha256: 483eb4061088e2b34b358e47540b5d495a96cd468e361050fae615b1809dc4a1
+  - name: SVT-AV1
+    buildsystem: cmake
+    sources:
+      - type: git 
+        url: https://gitlab.com/AOMediaCodec/SVT-AV1.git
+  - name: twolame
+    sources:
+      - type: git
+        url: https://github.com/njh/twolame.git
+        branch: main
+      - type: shell
+        commands:
+          - touch doc/twolame.1
+  - name: libvidstab
+    buildsystem: cmake
+    sources:
+      - type: git
+        url: https://github.com/georgmartius/vid.stab.git
+        tag: v1.1.1
+  - name: libvmaf
+    buildsystem: meson
+    subdir: libvmaf
+    sources:
+      - type: git
+        url: https://github.com/Netflix/vmaf.git
+        tag: 'v3.0.0'
+  - name: vo-amrwbenc
+    sources:
+      - type: archive
+        url: https://downloads.sourceforge.net/sourceforge/opencore-amr/vo-amrwbenc/vo-amrwbenc-0.1.3.tar.gz
+        sha256: 5652b391e0f0e296417b841b02987d3fd33e6c0af342c69542cbb016a71d9d4e
+  - name: vvenc
+    buildsystem: cmake
+    sources:
+      - type: git
+        url: https://github.com/fraunhoferhhi/vvenc.git
+        tag: 'v1.12.1'
+  - name: x264
+    config-opts:
+      - --enable-shared
+      - --enable-static
+    sources:
+      - type: git
+        url: https://code.videolan.org/videolan/x264.git
+        commit: be4f0200
+  - name: x265
+    buildsystem: cmake
+    subdir: source
+    sources:
+      - type: git
+        url: https://bitbucket.org/multicoreware/x265_git.git
+        tag: '3.6'
+  - name: xvid
+    subdir: build/generic
+    sources:
+      - type: archive
+        url: https://downloads.xvid.com/downloads/xvidcore-1.3.7.tar.gz
+        sha256: abbdcbd39555691dd1c9b4d08f0a031376a3b211652c0d8b3b8aa9be1303ce2d
+  - name: zimg
+    sources:
+      - type: git
+        url: https://github.com/sekrit-twc/zimg.git
+        tag: 'release-3.0.5'
+  - name: amf
+    buildsystem: simple
+    sources:
+      - type: git
+        url: https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git
+        tag: 'v1.4.35'
+    build-commands:
+      - mkdir -p /app/include/AMF
+      - cp -r amf/public/include/* /app/include/AMF/
+  - name: libgsm
+    buildsystem: simple
+    sources:
+      - type: archive
+#        url: https://www.quut.com/gsm/gsm-1.0.22.tar.gz
+        url: https://sources.buildroot.net/libgsm/gsm-1.0.22.tar.gz
+        sha256: f0072e91f6bb85a878b2f6dbf4a0b7c850c4deb8049d554c65340b3bf69df0ac
+    build-commands:
+      - make INSTALL_ROOT=/app
+      - make INSTALL_ROOT=/app GSM_INSTALL_INC=/app/include GSM_INSTALL_MAN=/app/share/man install
   - name: nv-codec-headers
     only-arches:
       - i386
@@ -78,15 +171,50 @@ modules:
       - --disable-manpages
       - --disable-stripping
       - --disable-ffplay
+      - --enable-ffprobe
       - --enable-gpl
+      - --enable-version3
+      - --enable-fontconfig
+      - --enable-iconv
+      - --enable-libass
+      - --enable-libdav1d
+      - --enable-libfreetype
+      - --enable-libharfbuzz
+      - --enable-libmp3lame
+      - --enable-libopencore-amrnb
+      - --enable-libopencore-amrwb
+      - --enable-libopenjpeg
+      - --enable-libopus
+#      - --enable-libsnappy
+      - --enable-libtheora
+      - --enable-libtwolame
+      - --enable-libvpx
+      - --enable-libwebp
+      - --enable-libx264
+      - --enable-libx265
+      - --enable-libvvenc
+      - --enable-libzimg
+      - --enable-lzma
+      - --enable-zlib
+      - --enable-libvidstab
+      - --enable-libvmaf
+      - --enable-libvorbis
+      - --enable-libvo-amrwbenc
+      - --enable-libxvid
+      - --enable-libgsm
+      - --enable-libsvtav1
+      - --enable-libaom
+      - --enable-ffnvcodec
+      - --enable-vdpau
+      - --enable-amf
       - --enable-nonfree
       - --enable-nvdec
       - --enable-nvenc
       - --enable-cuvid
     sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-5.1.4.tar.xz
-        sha256: 54383bb890a1cd62580e9f1eaa8081203196ed53bde9e98fb6b0004423f49063
+      - type: git
+        url: https://git.ffmpeg.org/ffmpeg.git
+        commit: eb3cc508d8
     post-install:
       - install -p -D -m 0644 COPYING* "LICENSE.md" -t "${FLATPAK_DEST}/share/licenses/ffmpeg/";
     cleanup:
@@ -108,7 +236,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/paulpacifico/shutter-encoder.git
-        tag: "18.4"
+        tag: "18.5"
       - type: file
         path: CMakeLists.txt
       - type: file

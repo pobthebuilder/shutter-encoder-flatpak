@@ -49,7 +49,23 @@
   </provides>
 
   <releases>    
-    <release version="18.4" date="2024-08-12">
+    <release version="18.5" date="2024-09-16">
+          <description>
+             - Added "Preview final output quality" checkbox to "Settings" window
+- Added levels for "Preserve folder hierarchy" checkbox
+- Added {timecode} preset for "Add a suffix" checkbox
+- Added shift+numpad for "Video Player" scrolling
+- Improved "Video Player" performance
+- Corrected bug for presets loading
+- Corrected bug with yt-dlp process on Mac
+- Corrected freeze bugs with "Video Player"
+- Corrected bug with reading timecode metadata
+- Corrected bug for "Record screen/device" option
+- Corrected bug with gpu decoding on "Video Player"
+- Various corrections
+- Various improvements
+          </description>
+        </release><release version="18.4" date="2024-08-12">
           <description>
              - Added "H.266" codec
 - Corrected display issues
