@@ -49,7 +49,20 @@
   </provides>
 
   <releases>    
-    <release version="18.1" date="2024-05-03">
+    <release version="18.2" date="2024-06-12">
+          <description>
+             - Added Arabic language thanks to ahmed-0011
+- Improved "Sound conversions" encoding speed
+- Improved presets saving with destination
+- Improved "Video player" with VFR files
+- Corrected bug with "Add image / video as watermark"
+- Corrected bug with app update on portable version
+- Corrected bug with "Broadcast codecs"
+- Corrected bug with "Display" option
+- Various corrections
+- Updated ffmpeg, ffprobe
+          </description>
+        </release><release version="18.1" date="2024-05-03">
           <description>
              - Added "Do not upscale lower resolutions" checkbox to "Settings" window
 - Added "Keep source audio tracks" with "Replace audio" function
